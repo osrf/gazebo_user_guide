@@ -1,4 +1,10 @@
 Requirements {#overview__requirements}
 ========
 
-What you need to know
+While we're working to make Gazebo more accessible to users with varying technical skills and computer configurations, users will have an easier time using Gazebo if they have experience with the following:
+
+ * programming skills?
+ * something else?
+ * something about ROS?
+
+Gazebo currently requires Linux...
