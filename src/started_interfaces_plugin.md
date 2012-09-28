@@ -1,4 +1,4 @@
-Plugin Interfaces {#fundamentals__interfaces__plugin}
+Plugin Interfaces {#started__interfaces__plugin}
 ==
 
 A plugin is a chunk of code that is compiled as a shared library and inserted into the simulation. The plugin has direct access to all the functionality of Gazebo through the standard C++ classes.

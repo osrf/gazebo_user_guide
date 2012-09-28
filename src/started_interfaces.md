@@ -1,10 +1,10 @@
-Interfaces {#fundamentals__interfaces}
+Interfaces {#started__interfaces}
 ======================
 
-- \subpage fundamentals__interfaces__plugin
-- \subpage fundamentals__interfaces__comms
-- \subpage fundamentals__interfaces__ros
-- \subpage fundamentals__interfaces__player
+- \subpage started__interfaces__plugin
+- \subpage started__interfaces__comms
+- \subpage started__interfaces__ros
+- \subpage started__interfaces__player
 
 This page describes how an external program can communicate with Gazebo. For most situations, a user of Gazebo will rely on an external library for robot control. These external libraries should supply functions that are used on real hardware platforms, such as path planning, joint control, and sensor processing. 
 

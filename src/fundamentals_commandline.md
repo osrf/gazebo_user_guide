@@ -1,10 +1,10 @@
-Command Line Tools {#fundamentals__commandline}
+Command Line Tools {#started__commandline}
 ======================
 
-- \subpage fundamentals__commandline__worldstats
-- \subpage fundamentals__commandline__topicinfo
-- \subpage fundamentals__commandline__sdfutil
-- \subpage fundamentals__commandline__factory
+- \subpage started__commandline__worldstats
+- \subpage started__commandline__topicinfo
+- \subpage started__commandline__sdfutil
+- \subpage started__commandline__factory
 
 World Statistics
 --

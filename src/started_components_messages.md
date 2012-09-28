@@ -1,4 +1,4 @@
-Messages {#fundamentals__components__messages}
+Messages {#started__components__messages}
 ======================
 
  - What messages are

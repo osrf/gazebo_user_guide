@@ -3,7 +3,7 @@ Overview {#overview}
 
 Gazebo is a multi-robot simulator for outdoor environments. Like Stage (part of the Player project), Gazebo is capable of simulating a population of robots, sensors and objects, but does so in a three-dimensional world. It generates both realistic sensor feedback and physically-plausible interactions between objects (it includes an accurate simulation of rigid-body physics).
 
-Check out the \subpage overview__features page for a full list of Gazebo's functionality.
+Check out the [Features](overview__features.html) page for a full list of Gazebo's functionality.
 
 Why use Gazebo?
 --
@@ -22,8 +22,7 @@ Gazebo is under active development at the Open Source Robotics Foundation. We ar
 
 ### In this chapter:
 
-- \subpage overview__features 
-- \subpage overview__capabilities 
-- \subpage overview__requirements 
+- \subpage overview__features
+- \subpage overview__skills 
 
 

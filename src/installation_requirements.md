@@ -1,9 +1,9 @@
-Requirements {#installation__requirements}
+System Requirements {#installation__requirements}
 ============
 
-To use Gazebo, you need to run Ubuntu… ????
+TO USE GAZEBO, YOU NEED TO RUN UBUNTU… ????
 
-Install all of the mandatory applications listed below.
+Before installing Gazebo, install all of the mandatory applications listed below.
 
 Mandatory
 --
