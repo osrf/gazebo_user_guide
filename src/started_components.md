@@ -1,6 +1,8 @@
 Components {#started__components}
 ======================
+INTRO TO COMPONENTS
 
+### In this section:
 - \subpage started__components__world
 - \subpage started__components__model
 - \subpage started__components__env

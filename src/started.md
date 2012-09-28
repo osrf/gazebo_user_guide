@@ -5,12 +5,12 @@ In this chapter, we'll explain Gazebo's core components and concepts. You'll lea
 These key concepts will help you understand Gazebo and will allow you to use it as effectively as possible.  
 
 
-### In this Chapter:
-- \subpage started_commandline
+### In this chapter:
 - \subpage started_gui
+- \subpage started_commandlineinterface
 - \subpage started__arch
 - \subpage started__sdf
 - \subpage started__components
-- \subpage started__commandline
+- \subpage started__commandlinetools
 - \subpage started__models
 - \subpage started__interfaces

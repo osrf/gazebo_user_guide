@@ -5,3 +5,6 @@ Messages {#started__components__messages}
  - Built in messages
  - Defining your own messages outside of gazebo
 
+PERHAPS A DIAGRAM HERE (WORK WITH STEFFI TO GET THAT)
+
+

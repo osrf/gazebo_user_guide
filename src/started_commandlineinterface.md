@@ -1,4 +1,4 @@
-Command Line Interface {#started_commandline}
+Command Line Interface {#started_commandlineinterface}
 ======================
 
 The command line interface allows you to...

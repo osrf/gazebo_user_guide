@@ -1,10 +1,6 @@
 Interfaces {#started__interfaces}
 ======================
-
-- \subpage started__interfaces__plugin
-- \subpage started__interfaces__comms
-- \subpage started__interfaces__ros
-- \subpage started__interfaces__player
+ANYTHING ELSE TO ADD TO THE INTRO? DOES THE TOPIC LIST SECTION FIT IN HERE? IF YES, IT NEEDS TO BE ADDED TO THE TABLE OF CONTENTS FOR THE SECTION.
 
 This page describes how an external program can communicate with Gazebo. For most situations, a user of Gazebo will rely on an external library for robot control. These external libraries should supply functions that are used on real hardware platforms, such as path planning, joint control, and sensor processing. 
 
@@ -17,7 +13,20 @@ Additional interfaces are more than welcome. Please refer to the [[contributing]
 
 Gazebo also supports a couple generic interfaces through [[tutorials/plugins | plugins]] and TCP/IP communication. 
 
+
+### In this section:
+- \subpage started__interfaces__plugin
+- \subpage started__interfaces__comms
+- \subpage started__interfaces__ros
+- \subpage started__interfaces__player
+
+# Plugin Interfaces  #
+
+ADD INFO
+
 # TCP Communication  #
+
+ADD INFO
 
 This section lists all the topics that a running instance of Gazebo creates when started. 
 
@@ -25,7 +34,17 @@ You can also get the list of a running system by using this command
 
         gztopic list 
 
+# ROS  #
+
+ADD INFO
+
+# Player  #
+
+ADD INFO
+
 # Topic List #
+
+ADD EXPLANATION
 
 
 **gazebo/<world_name>/world_stats**

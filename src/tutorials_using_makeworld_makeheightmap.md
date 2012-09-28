@@ -1,3 +1,6 @@
 Make a Heightmap {#tutorials__using__makeworld__makeheightmap}
 ============
 
+A height map consists of…
+
+…tutorial...

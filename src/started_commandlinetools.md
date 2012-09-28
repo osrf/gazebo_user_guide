@@ -1,10 +1,18 @@
-Command Line Tools {#started__commandline}
+Command Line Tools {#started__commandlinetools}
 ======================
+THE COMMAND LINE TOOLS ARE USED TO...
 
-- \subpage started__commandline__worldstats
-- \subpage started__commandline__topicinfo
-- \subpage started__commandline__sdfutil
-- \subpage started__commandline__factory
+THERE ARE 4 (??) MAIN COMMAND LINE TOOLS:...
+
+**World Statistics**
+
+**Topic Info**
+
+**SDF Utility**
+
+**Factory**
+
+
 
 World Statistics
 --

@@ -1,5 +1,6 @@
 Architecture {#started__arch}
 ======================
+THIS SECTION SHOULD BE REWRITTEN IN THE PRESENT TENSE, AND LIKELY NEEDS TO BE UPDATED OVERALL.
 
 In order to address the requirements and resolve the current issues with Gazebo, we propose a distributed architecture. Gazebo will be broken into libraries for physics simulation, rendering, user interface, communication, and sensor generation. Three different processes will be provided: `physics_sim`, `sensor_gen`, `gui`, and a `master` for coordination. 
 
