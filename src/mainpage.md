@@ -1,4 +1,4 @@
-Introduction {#mainpage}
+Table of Contents {#mainpage}
 ===================== 
 
 Welcome to the Gazebo User Guide. This guide contains information about the

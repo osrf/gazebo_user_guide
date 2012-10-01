@@ -1,5 +1,6 @@
 Model Database {#started__models__database}
 ==
+ADD INFO ON THE MODEL DATABASE WE'RE PROVIDING. INCLUDE LICENSING INFO.
 
 Models in Gazebo define a physical entity with dynamic, kinematic, and visual properties. In addition a model may have one or more plugins which effect the model's behavior. A model can represent anything from a shape to a complex robot, even the ground is a model. 
 
