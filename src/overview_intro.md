@@ -1,5 +1,5 @@
 Introduction to Gazebo {#overview__intro}
-========
+==
 
 
 What is Gazebo?
