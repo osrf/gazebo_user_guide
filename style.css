@@ -1,7 +1,36 @@
 /* The standard CSS for doxygen */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+display: block 
+}
+
+html
+{
+-webkit-font-smoothing: antialiased
+}
+
+body {
+line-height: 1;
+-webkit-text-size-adjust: none
+}
+
+blockquote, q
+{ quotes: none }
+blockquote: before, blockquote: after, q: before, q: after
+{ content: ""; content: none }
+table
+{ border-collapse: collapse; border-spacing: 0 }
+strong, b
+{ font-weight: 600 }
+em, i
+{ font-style: italic }
 
 body, table, div, p, dl {
-	font: 400 14px/19px Roboto,sans-serif;
+	/*font: 400 14px/19px Roboto,sans-serif;*/
+  /*font-family: "Lucida Grande", Geneva, Verdana, "Droid Sans", "DejaVu Sans", arial, sans-serif;*/
+  font-smooth: always;
+
+  font: 300 14px/19px Arial,Verdana,DejaVu Sans,Geneva,sans-serif;*/
 }
 
 /* @group Heading Levels */

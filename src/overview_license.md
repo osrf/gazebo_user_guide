@@ -4,12 +4,7 @@ License {#overview__license}
 ### Gazebo Source Code
 Gazebo is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
 
-### Gazebo Model Database
-All models, materials, and meta-data distributed through the Gazebo Model Database is licensed under the [Creative Commons Attribution 3.0 Uported License](http://creativecommons.org/licenses/by/3.0/).
-
-### How to apply the license
-
-As a developer for Gazebo, you need to add the following comment block to the top of each file you plan on contribute to Gazebo.
+Gazebo developers must add the following comment block to the top of each file contributed to Gazebo.
 
 ~~~
 /*
@@ -30,3 +25,10 @@ As a developer for Gazebo, you need to add the following comment block to the to
  * limitations under the License.
 */
 ~~~
+
+### Gazebo Model Database
+All models, materials, and meta-data distributed through the Gazebo Model Database is licensed under the [Creative Commons Attribution 3.0 Uported License](http://creativecommons.org/licenses/by/3.0/).
+
+### This Document
+
+This document is licensed under the [Creative Commons Attribution 3.0 Uported License](http://creativecommons.org/licenses/by/3.0/).
