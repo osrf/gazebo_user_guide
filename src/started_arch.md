@@ -3,7 +3,7 @@ Architecture {#started__arch}
 
 Gazebo is divided into several libraries:
 
- + **Physics:** Maintains and updates the physical state of the simuation.
+ + **Physics:** Maintains and updates the physical state of the simulation.
  + **Rendering:** Visualizes the simulation state.
  + **Sensors:** Generates sensor data.
  + **Transport:** Handles communication between processes.

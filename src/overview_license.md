@@ -27,8 +27,8 @@ Gazebo developers must add the following comment block to the top of each file c
 ~~~
 
 ### Gazebo Model Database
-All models, materials, and meta-data distributed through the Gazebo Model Database is licensed under the [Creative Commons Attribution 3.0 Uported License](http://creativecommons.org/licenses/by/3.0/).
+All models, materials, and meta-data distributed through the Gazebo Model Database is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
 
 ### This Document
 
-This document is licensed under the [Creative Commons Attribution 3.0 Uported License](http://creativecommons.org/licenses/by/3.0/).
+This document is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).
