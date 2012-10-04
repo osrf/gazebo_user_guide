@@ -1,7 +1,7 @@
 Architecture {#started__arch}
 ======================
 
-Gazebo is divided into several libraries:
+**Gazebo is divided into several libraries:**
 
  + **Physics:** Maintains and updates the physical state of the simulation.
  + **Rendering:** Visualizes the simulation state.
@@ -9,7 +9,7 @@ Gazebo is divided into several libraries:
  + **Transport:** Handles communication between processes.
  + **GUI:** A QT-based user interface.
 
-These libraries are used by two main processes:
+**These libraries are used by two main processes:**
 
 + **Server:** Runs the physics loop, and generates sensors data.
   + *Executable:* `gzserver`   
