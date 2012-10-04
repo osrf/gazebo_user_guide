@@ -40,16 +40,13 @@ navigation and grasping in a controlled environment.
 
 Gazebo has historically been used as a research and developement tool for robotic researchers and engineers. Over the years, Gazebo's functionality has grown to encompass the follow use cases:
 
- * Regression testing: 
- * Rapid prototyping: Design and develop robot and robot controllers with Gazebo's interfaces to ROS and Solidworks.
+ * Rapid prototyping: Design and develop robot and robot controllers with interfaces to [ROS](http://www.ros.org/wiki/gazebo) and [Solidworks](http://www.ros.org/wiki/sw_urdf_exporter).
  * Custom UI: Create your own interfaces to Gazebo for personalized user interaction, or research studies.
  * Legged locomotion: Design and test legged robot locomotion.
  * Robot competition: Run team competitions in soccer or outdoor environments.
  * Person simulation: Use human motion capture data to animate people.
- * Phyics simulation research:
+ * Regression testing: Use Gazebo to test simple or complex robot systems to maintain code.
 
-
-### Terminology
 
 ### Gazebo in the Future
 

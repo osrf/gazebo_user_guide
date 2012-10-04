@@ -1,78 +1,52 @@
 Architecture {#started__arch}
 ======================
-THIS SECTION SHOULD BE REWRITTEN IN THE PRESENT TENSE, AND LIKELY NEEDS TO BE UPDATED OVERALL.
 
-In order to address the requirements and resolve the current issues with Gazebo, we propose a distributed architecture. Gazebo will be broken into libraries for physics simulation, rendering, user interface, communication, and sensor generation. Three different processes will be provided: `physics_sim`, `sensor_gen`, `gui`, and a `master` for coordination. 
+Gazebo is divided into several libraries:
 
-Communication Between Processes
-==
+ + **Physics:** Maintains and updates the physical state of the simuation.
+ + **Rendering:** Visualizes the simulation state.
+ + **Sensors:** Generates sensor data.
+ + **Transport:** Handles communication between processes.
+ + **GUI:** A QT-based user interface.
 
-Communication between each process will use a combination of google::protobufs and sockets. The communication architecture will mimic that of ROS nodes. A simulated world will publish body pose updates, and sensor generation and GUI will consume these messages to produce output.
+These libraries are used by two main processes:
 
-This mechanism will allow for introspection of a running simulation, and provide a convenient mechanism to control aspects 
-of Gazebo.
++ **Server:** Runs the physics loop, and generates sensors data.
+  + *Executable:* `gzserver`   
+  + *Libraries:* Physics, Sensors, Rendering, Transport
 
-System Diagram
-==
-[[File:Gazebo design.png]]
++ **Client:** Provides user interaction and visualization of a simulation.
+  + *Executable:* `gzclient`
+  + *Libraries:* Transport, Rendering, GUI
 
-Gazebo Master
---
-This is a stripped down clone of the ROS master. It provides namelookup, and topic management. A single master can handle multiple physics simulations, sensor generators, and GUIs. 
+![Gazebo Architecture Diagram](architecture.png)
 
-Communication Library
---
- * **Dependencies:** Protobuf and boost::ASIO
- * **External API:**
- * **Internal API:** None
- * **Advertised Topics:** None
- * **Subscribed Topics:** None
+### Physics Library
+  The physics library runs the physics update cycle, loads and maintains all the models and their plugins, and is capable of saving and loading simulation state.
+  Gazebo utilizes 3rd party physics engines, such as [ODE](http://opende.sourceforge.net) or [Bullet](http://bulletphysics.org), to compute the proper dynamic and kinematic effects.
 
-This library is used by almost all subsequent libraries. It acts as the communication and transport mechanism for Gazebo. It currently supports only publish/subscribe, but it's possible to use RPC with minimal effort. 
+  > **Plugin Support:** Plugins can be loaded into the World and individual Models.
 
-Physics Library
---
- * **Dependencies:** Dynamics engine, and Collision Library
- * **External API:** Provides a simple and generic interface to physics simulation
- * **Internal API:** Defines a fundamental interface to the physics library for 3rd party dynamic engines.
+### Rendering Library
+  The rendering library utilizes [OGRE](http://ogre3d.org) to visualize the
+  simulation world. This library is used by the graphical interface so
+  a user can see and interact with simulation, and it is used by the sensor
+  library to generate data for sensors like a camera.
 
-The physics library can use any dynamic engine that conforms to the internal API (TBD). It also presents a simple external interface in order to establish a work physics simulation.
+  > **Plugin Support:** Forthcoming
+ 
+### Sensors Library
+  The responsiblity of this library to to load and update individual
+  sensors, such as lasers, cameras, and IMUs.
 
-Collision Library
---
- * **Dependencies:** 3rd party collision engine
- * **External API:** TBD
- * **Internal API:** Generic interface for collision engines
- * **Advertised Topics:** None
- * **Subscribed Topics:** None
+  > **Plugin Support:** Plugins may be loaded into each sensor.
 
-This is an abstraction library to handle different collision engines, and provide a simple external interface to the user.
+### Transport Library
+  This library uses [boost::asio](http://www.boost.org/doc/libs/1_51_0/doc/html/boost_asio.html) to create and maintain socket based connections between Gazebo components. [Google protobuf](http://code.google.com/p/protobuf/) provides the message serialization and deserialization infrastructure to pass data between components.
 
-Rendering Library
---
- * **Dependencies:** OGRE
- * **External API:** Allows for loading, initialization, and scene creation
- * **Internal API:** None, we are going to use only OGRE.
+  > **Plugin Support:** None
 
-The rendering library provides a simple interface to both the GUI and sensor generation. We are currently sticking with OGRE since we don't have a better alternative. It will be possible to write plugins for the rendering engine.
+### GUI Library
+  This library uses [QT](http://qt-project.org/) to allow users access to a running simulation. The GUI provides a mechanism to view, create, modify, and save simulation instances.
 
-Sensor Generation
---
- * **Dependencies:** Rendering Library, Collision Library
- * **External API:** Provide functionality to initialize and run a set of sensors
- * **Internal API:** TBD
-
-The sensor generation library implements all the various types of sensors, listens to world state updates from a physics simulator and produces output specified by the instantiated sensors.
-
-GUI
---
- * **Dependencies:** Rendering Library, wxWidgets
- * **External API:** None
- * **Internal API:** None
-
-The primary function of the GUI involves displaying the current state of the simulation and providing a convenient means for user input. There is no need for an internal or external API since we are sticking with wxWidgets. 
-
-Plugins
---
-The physics, sensor, and rendering libraries will support plugins. These plugins will provide users with access to the respective libraries without using the communication system.
-
+  > **Plugin Support:** Forthcoming

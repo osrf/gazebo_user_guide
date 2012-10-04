@@ -6,9 +6,9 @@ These key concepts will help you understand Gazebo and will allow you to use it 
 
 
 ### In this chapter:
+- \subpage started__arch
 - \subpage started_gui
 - \subpage started_commandlineinterface
-- \subpage started__arch
 - \subpage started__sdf
 - \subpage started__components
 - \subpage started__commandlinetools
