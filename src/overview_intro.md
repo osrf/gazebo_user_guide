@@ -38,7 +38,7 @@ navigation and grasping in a controlled environment.
 
 ### What can I do with Gazebo
 
-Gazebo has historically been used as a research and developement tool for robotic researchers and engineers. Over the years, Gazebo's functionality has grown to encompass the follow use cases:
+Gazebo has historically been used as a research and developement tool for robotic researchers and engineers. Over the years, Gazebo's functionality has grown to encompass the following use cases:
 
  * Rapid prototyping: Design and develop robot and robot controllers with interfaces to [ROS](http://www.ros.org/wiki/gazebo) and [Solidworks](http://www.ros.org/wiki/sw_urdf_exporter).
  * Custom UI: Create your own interfaces to Gazebo for personalized user interaction, or research studies.
