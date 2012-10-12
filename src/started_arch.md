@@ -19,7 +19,7 @@ Architecture {#started__arch}
   + *Executable:* `gzclient`
   + *Libraries:* Transport, Rendering, GUI
 
-![Gazebo Architecture Diagram](architecture.png)
+![Gazebo Architecture Diagram](../../images/architecture.png)
 
 ### Physics Library
   The physics library runs the physics update cycle, loads and maintains all the models and their plugins, and is capable of saving and loading simulation state.
