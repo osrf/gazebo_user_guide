@@ -27,10 +27,11 @@ on pre-compiled binaries for your platform.
 
 Required
 --
-**Ogre3d**
+**OGRE**
 
  - Version: >= 1.7.1
  - Web: http://www.ogre3d.org
+ - For heightmap support in Gazebo, OGRE must be compiled with Cg support.
 
 **Protobuf**
 
