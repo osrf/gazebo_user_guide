@@ -2,14 +2,19 @@ System Requirements {#installation__requirements}
 ============
 
 **Ubuntu users**: the system requirements listed here are handled
-automatically when you install Gazebo via *apt-get*.  See the [Ubuntu
-installation instructions](installation__procedure__ubuntu).
+automatically when you install Gazebo via *apt-get*.  See the [installation
+instructions](http://gazebosim.org/wiki/1.2/install).
 
 We develop and run Gazebo primarily on Ubuntu Linux.  You will have the
 easiest time and best experience if you start with a reasonably modern
 Ubuntu system.  At the time of writing we are developing Gazebo on Ubuntu
 12.04 (precise).  We plan to support Gazebo on other platforms and welcome
 patches that improve the portability of Gazebo.
+
+Depending on what kind of environment and robots you're simulating, Gazebo
+can be computationally intensive.  The exact CPU requirements will depend
+on how you use Gazebo, but in general we recommend that you err on the side
+of having a more powerful CPU.
 
 Gazebo's rendering engine uses OpenGL via OGRE; as such it requires a
 graphics card (GPU) when running the GUI or when visualizing certain kinds
