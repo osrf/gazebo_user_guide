@@ -7,7 +7,7 @@ EVERYONE READ:
 3. If you are new to Gazebo or just want to use Gazebo as a stand-alone application, then choose the Ubuntu or Tarball  instructions below.
 4. If you're still reading, select a download method below. 
 
-Ubuntu
+Ubuntu {#installation__procedure__ubuntu}
 ==
 
 1.  Download the Debian binary from the [Downloads] (http://gazebosim.org/downloads.html) page.
