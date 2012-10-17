@@ -1,6 +1,6 @@
 Graphical User Interface {#started_gui}
 ======================
-The Graphical User Interface (GUI) displays the simulation and lets user interact with the world via four components.  The GUI consists of the World View, Tree, Toolbar and Clock. The World View contains the world and model(s). The Tree hierarchically presents all of the components that make up the world and models. The Toolbar contains various controls that allow the user to switch interaction modes and insert simple shapes and lights. The clock at the bottom lets users play, pause and step through the simulation.
+The Graphical User Interface (GUI) displays the simulation and lets users interact with the world via four components.  The GUI consists of the World View, Tree, Toolbar and Clock. The World View contains the world and models. The Tree hierarchically presents all of the components that make up the world and models. The Toolbar contains various controls that allow the user to switch interaction modes and insert simple shapes and lights. The clock at the bottom lets users play, pause and step through the simulation.
 
 ![GUIOverview](../../images/GUIwithLabels.png "Labeled GUI")
 
@@ -8,7 +8,7 @@ The Graphical User Interface (GUI) displays the simulation and lets user interac
 
 
 ## The World View
-The World View displays the world and all of the models therein. It is here that users can add, manipulate, and remove models. Users can switch between the View, Translate and Rotate modes in the left side of the Toolbar to switch between interaction modes within the World View. In View Mode, users can navigate around the world by panning, orbiting and zooming. Translate Mode affords users the ability to translate an object, and Rotate Mode, well, it lets you rotate an object. 
+The World View displays the world and all of the models therein. It is here that users can add, manipulate, and remove models. Users can switch between the View, Translate and Rotate modes in the left side of the Toolbar to switch between interaction modes within the World View. In View Mode, users can navigate around the world by panning, orbiting and zooming. Translate Mode lets users translate an object, and Rotate Mode, well, it lets you rotate an object. 
 
 <!-- When an object is selected in the World View (by left-clicking in View Mode, or left-pressing in Translate or Rotate Modes), it is outlined in white. -->  
 
@@ -32,13 +32,13 @@ Right-clicking on a model in the Models section gives you three options: Move to
 
 
 ### Insert Tab
-The Insert Tab displays all of the models available for use in Gazebo. The first directory is your directory of local models. The second directory is the Gazebo model database. Once a model has been inserted from here, it will appear in the first local directory as well.
+The Insert Tab displays all of the models available for use in Gazebo. The first directory is your directory of local models. The second directory is the Gazebo model database. Once a model has been inserted from here, it will appear in the local directory as well.
 
-To add a model to the world, left-click on the desired model in the Insert Tab, and move the cursor to the World View. The model should be attached to the cursor. Move it to the desired location and left-click again to release. You can use the Translate and Rotate modes to orient the model more precisely.  
+To add a model to the world, left-click on the desired model in the Insert Tab, and move the cursor to the World View. The model should be attached to the cursor. Move it to the desired location and left-click again to release. You can then use the Translate and Rotate modes to orient the model more precisely.  
 
 
 ## Toolbar
-The Toolbar sits in the top left corner of the World View and provides tools with which to navigate and manipulate the world. 
+The Toolbar sits at the top of the World View and provides tools with which to navigate and manipulate the world. 
 
 ![Toolbar](../../images/Toolbar.png "Toolbar")
 
@@ -61,17 +61,21 @@ Users can start, pause and step through the simulation with the clock, located a
 **Real Time:** Displays how long the simulation has been running, based on real time.
 
 
-
-
 ## Menu
 
-The menu options are as follows:
+The menu options are as follows: **NATE, PLEASE PUT EACH ONE ON A SEPARATE LINE WITH NO SPACE BETWEEN, I CAN'T FIGURE IT OUT**
 
-File --> Save World As (Saves the current world to file)
-File --> Quit (Bet you can't guess!)
+File --> Save World As: Saves the current world to file
+File --> Quit: Bet you can't guess!
 
-Edit--> Reset Model Poses (Resets all models to their position when they were first inserted)
-Edit--> Reset World (Resets model poses AND time)
+Edit --> Reset Model Poses: Resets all models to their position when they were first inserted
+Edit --> Reset World: Resets model poses AND time
+
+View --> Grid: Checking/unchecking this reveals/hides the grid on the ground plane
+View --> Reset View: Returns the view to a default view 
+View --> Full Screen: Puts the World View into fullscreen
+View --> Orbit View Control: **NATE TODO**
+
 
 <!--Mention Snap to Grid -->
 
