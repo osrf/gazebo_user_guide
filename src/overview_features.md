@@ -1,7 +1,10 @@
 Features {#overview__features}
 ========
 
-Gazebo is a feature-rich application that is under constant development by
+
+![Features](GazeboFeatures.png "Features")
+
+<!-- Gazebo is a feature-rich application that is under constant development by
 a large user community. The following list presents a few of the primary features offered by Gazebo.
 
 **Dynamics Simulation**
@@ -62,4 +65,4 @@ a large user community. The following list presents a few of the primary feature
 
 **Person simulation**
 
- • Replay human motion capture data in a running simulation.
+ • Replay human motion capture data in a running simulation. -->

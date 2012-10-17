@@ -2,9 +2,7 @@ Graphical User Interface {#started_gui}
 ======================
 The Graphical User Interface (GUI) displays the simulation and lets users interact with the world via four components.  The GUI consists of the World View, Tree, Toolbar and Clock. The World View contains the world and models. The Tree hierarchically presents all of the components that make up the world and models. The Toolbar contains various controls that allow the user to switch interaction modes and insert simple shapes and lights. The clock at the bottom lets users play, pause and step through the simulation.
 
-![GUIOverview](images/GUIwithLabels.png "Labeled GUI")
-
-
+![GUIOverview](GUIwithLabels.png "Labeled GUI")
 
 
 ## The World View
@@ -15,14 +13,13 @@ The World View displays the world and all of the models therein. It is here that
 ### Navigating in the World View
 To take advantage of Gazebo's camera and object manipulation controls, you'll need a three-button mouse with a scroll wheel. There are three modes for interacting with the 3D window. To switch between modes, select the appropriate arrow from the Toolbar.
 
-![Navigation Controls](images/GUIMouseControls.png "Navigation Controls")
-
+![Navigation Controls](GUIMouseControls.png "Navigation Controls")
 
 
 ## The Tree
 The Tree lists the models in the world, and allows users to change a variety of parameters for most models. The Tree is also where users can add new models to the world. The Tree consists of the World and Insert tabs. 
 
-![Tree Tabs](images/TreeTabs.png "Tree Tabs")
+![Tree Tabs](TreeTabs.png "Tree Tabs")
 
 ### World Tab
 This tab is divided into Scene, Physics, Models, and Lights. Each section contains relevant parameters that can be altered by the user. These parameters appear in the bottom half of the Tree when an item is selected. 
@@ -40,7 +37,7 @@ To add a model to the world, left-click on the desired model in the Insert Tab, 
 ## Toolbar
 The Toolbar sits at the top of the World View and provides tools with which to navigate and manipulate the world. 
 
-![Toolbar](images/Toolbar.png "Toolbar")
+![Toolbar](Toolbar.png "Toolbar")
 
 The arrow icons are the **View, Translate and Rotate modes.** These interaction modes allow users to navigate within the world and manipulate models. For more detailed information on using these modes, see Navigating in the World View (above). 
 
@@ -52,7 +49,7 @@ The **Point Light, Spot Light and Directional Light icons** allow users to inser
 ## Clock
 Users can start, pause and step through the simulation with the clock, located at the bottom of the World View. 
 
-![Clock](images/Clock.png "Clock")
+![Clock](Clock.png "Clock")
 
 **Real Time Factor:** Displays how fast or slow the simulation is running in comparison to real time (which is 1).
 
