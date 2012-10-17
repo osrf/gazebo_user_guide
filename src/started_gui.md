@@ -16,19 +16,19 @@ To take advantage of Gazebo's camera and object manipulation controls, you'll ne
 
 View Mode is used to move the camera in the scene to view the environment. When in this mode, you cannot move the models. Double-clicking on an object will switch you to Translate Mode where you can move objects.
 
-![View Mode Controls](../../images/ViewWorld.png "View Mode Controls")
+![View Mode Controls](ViewWorld.png "View Mode Controls")
 
 **Translate Mode**
 
 To switch to Translate Mode, double-click on a model, or select the four-headed arrow in the toolbar. To translate a model, click on the model you want to move and drag to the desired location. For more precise translation, hold down the x, y, or z keys while dragging to move only along those axes. The scroll wheel maintains the functionality found in View Mode.
 
-![Translate Mode Controls](../../images/TranslateObject.png "Translate Mode Controls")
+![Translate Mode Controls](TranslateObject.png "Translate Mode Controls")
 
 **Rotate Mode**
 
 Rotate Mode allows you to rotate about each axis. Similar to Translate Mode, the x, y, and z keys are used to rotate about those axes. The scroll wheel maintains the functionality found in View Mode.
 
-![Rotate Mode Controls](../../images/RotateObject.png "Rotate Mode Controls")
+![Rotate Mode Controls](RotateObject.png "Rotate Mode Controls")
 
 ### Simulation Time
 
