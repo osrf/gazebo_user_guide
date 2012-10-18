@@ -76,11 +76,11 @@ Required
  - Web: http://freeimage.sourceforge.net/
  - Purpose: Load image files for use within Gazebo.
 
-**freeglut**
+**OpenGL**
 
- - Version:
- - Web: http://freeglut.sourceforge.net/
- - Purpose: Rendering for offscreen buffers when running Gazebo headless.
+ - Version: N/A
+ - Web: N/A
+ - Note: OpenGL is provided by the vendor (e.g. nVidia, ATI, Intel), of your graphics card.
 
 **libcurl**
 
@@ -96,13 +96,13 @@ Required
 
 **pkg-config**
 
- - Version:
+ - Version: >= 0.26
  - Web: http://www.freedesktop.org/wiki/Software/pkg-config
  - Purpose: Find software packages during compile.
 
 **libltdl**
 
- - Version: 
+ - Version: >=2.4.2
  - Web: http://www.gnu.org/software/libtool/
  - Purpose: Load plugins.
 
@@ -122,11 +122,11 @@ Optional
 
 **urdfdom**
 
- - Version:
+ - Version: >= 0.2.2
  - Web: https://kforge.ros.org/projects/robotmodel/services/urdfdom/
  - Purpose: Load URDF files into Gazebo.
 
 **ffmpeg**
- - Version: 
+ - Version: >=0.8.3
  - Web: http://ffmpeg.org
  - Purpose: Playback movies on textured surfaces within Gazebo.
