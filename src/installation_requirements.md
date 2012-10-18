@@ -3,7 +3,7 @@ System Requirements {#installation__requirements}
 
 **Ubuntu users**: the system requirements listed here are handled
 automatically when you install Gazebo via *apt-get*.  See the [installation
-instructions](http://gazebosim.org/wiki/1.2/install).
+instructions](http://gazebosim.org/wiki/install) for version 1.2 and above.
 
 We develop and run Gazebo primarily on Ubuntu Linux.  You will have the
 easiest time and best experience if you start with a reasonably modern
@@ -36,39 +36,47 @@ Required
 
  - Version: >= 1.7.1
  - Web: http://www.ogre3d.org
- - For heightmap support in Gazebo, OGRE must be compiled with Cg support.
+ - Purpose: Rendering and sensor data generation.
+ - Note: For heightmap support in Gazebo, OGRE must be compiled with Cg support.
 
 **Protobuf**
 
  - Version: >= 2.3.0
  - Web: http://code.google.com/p/protobuf/
+ - Purpose: Message passing between server and clients
 
 **TinyXML**
 
  - Version: >= 2.6.2
  - Web: http://www.grinninglizard.com/tinyxml/
+ - Purpose: Parse SDF files.
 
 **libxml-2**
 
  - Version: >= 2.7.7
  - Web: http://xmlsoft.org/
+ - Purpose: Support for deprecated XML file formats.
 
 **TBB**
 
  - Version: >= 3.0
  - Web: http://threadingbuildingblocks.org/
+ - Purpose: Improve performance in complex simulations.
 
 **Boost**
 
  - Version: >= 1.40.0
  - Web: http://boost.org
  - Components: thread, signals, system, filesystem, program-options, regex, iostreams
+ - Purpose: Cross-platform toolset.
 
 **FreeImage**
 
  - Version: >= 3.0
  - Web: http://freeimage.sourceforge.net/
+ - Purpose: Load image files for use within Gazebo.
 
+Brian: I don't think we need freeglut
 **freeglut**
 
  - Version:
@@ -78,21 +86,25 @@ Required
 
  - Version: >= 4.0
  - Web: http://curl.haxx.se/libcurl/
+ - Purpose: Interface to the model database.
 
 **libtar**
 
  - Version: >= 1.2
  - Web: http://www.feep.net/libtar/
+ - Purpose: Unpack models downloaded from the model database.
 
 **pkg-config**
 
  - Version:
  - Web: http://www.freedesktop.org/wiki/Software/pkg-config
+ - Purpose: Find software packages during compile.
 
 **libltdl**
 
  - Version: 
  - Web: http://www.gnu.org/software/libtool/
+ - Purpose: Load plugins.
 
 Optional
 --
@@ -100,14 +112,21 @@ Optional
 
  - Version: 0.7.5
  - Web: http://www.cegui.org.uk/wiki/index.php/Main_Page
+ - Purpose: Design custom graphical interfaces for Gazebo.
 
 **Player**
 
  - Version: >= 3.0
  - Web: http://playerstage.sourceforge.net
+ - Purpose: Use Player to control robots within Gazebo.
 
 **urdfdom**
 
  - Version:
  - Web: https://kforge.ros.org/projects/robotmodel/services/urdfdom/
+ - Purpose: Load URDF files into Gazebo.
 
+**ffmpeg**
+ - Version: 
+ - Web: http://ffmpeg.org
+ - Purpose: Playback movies on textured surfaces within Gazebo.
