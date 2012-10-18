@@ -5,4 +5,4 @@ other platforms, users can compile Gazebo from source.
 
 For the latest installation instructions, including the status on
 pre-compiled binary support, check the [installation
-instructions](http://gazebosim.org/wiki/1.2/install).
+instructions](http://gazebosim.org/wiki/install).
