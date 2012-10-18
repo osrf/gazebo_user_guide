@@ -76,11 +76,11 @@ Required
  - Web: http://freeimage.sourceforge.net/
  - Purpose: Load image files for use within Gazebo.
 
-Brian: I don't think we need freeglut
 **freeglut**
 
  - Version:
  - Web: http://freeglut.sourceforge.net/
+ - Purpose: Rendering for offscreen buffers when running Gazebo headless.
 
 **libcurl**
 
