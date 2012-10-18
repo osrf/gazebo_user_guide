@@ -34,10 +34,10 @@ files, either locally on the user's machine or in the online
 [Building a model](@ref started__models__building) is the process of writing that SDF file.  Models
 can be used hierarchically: one model can include another model as a child,
 such as when attaching a pre-defined model of a laser range-finder to a new
-robot.  And models can be multiply instantiated, which is useful if your
-new robot has more than one laser range-finder.  Models are easy to share,
-either by giving the model file(s) directly to others, or by adding them to
-the online [model database](@ref started__models__database).
+robot.  And models can be multiply instantiated, which is useful if, for
+example, you want two copies of a robot in your world.  Models are easy to
+share, either by giving the model file(s) directly to others, or by adding
+them to the online [model database](@ref started__models__database).
 
 
 ### In this section:
