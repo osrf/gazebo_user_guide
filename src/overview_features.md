@@ -4,6 +4,7 @@ Features {#overview__features}
 
 ![Features](GazeboFeatures.png "Features")
 
+
 <!-- Gazebo is a feature-rich application that is under constant development by
 a large user community. The following list presents a few of the primary features offered by Gazebo.
 
