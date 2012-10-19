@@ -122,7 +122,7 @@ Optional
 
 **urdfdom**
 
- - Version: >= 0.2.2
+ - Version: ROS Fuerte
  - Web: https://kforge.ros.org/projects/robotmodel/services/urdfdom/
  - Purpose: Load URDF files into Gazebo.
 

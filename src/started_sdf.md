@@ -1,13 +1,16 @@
 Simulation Description Format (SDF) {#started__sdf}
 ======================
-NEEDS A BIT MORE ABOUT WHAT SDF IS. 
 
-Gazebo uses XML to store World and Model descriptions. A World file contains a description of the World, and a Model file contains a description of a physical entity in the World.
+Gazebo uses XML to load and save information about a simulation world or model. We have defined our own format, called Simulation Description Format (SDF), that encapsulates all the necessary information for a robotic simulator. This information includes:
 
-Older versions of SDF are automatically translated to the version of SDF used by Gazebo.
+-  **Scene**: Ambient lighting, sky properties, shadows.
+-  **Physics**: Gravity, time step, physics engine.
+-  **Models**: Collection of links, collision objects, joints, and sensors.
+-  **Lights**: Point, sport, and directional light sources.
+-  **Plugins**: World, model, sensor, and system plugins.
 
-**SDF Version formats:**
 
- Version 1.0: http://gazebosim.org/sdf/sdf\_1\_0.html
+SDF is easily extensible, self-descriptive, and a command line tool (gzsdf) can update old versions of SDF to the latest version. 
 
- Version 1.2: http://gazebosim.org/sdf/sdf\_1\_2.html
+
+The complete description of the SDF format is located at http://gazebosim.org/sdf
