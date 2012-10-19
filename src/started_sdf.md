@@ -6,7 +6,7 @@ Gazebo uses XML to load and save information about a simulation world or model. 
 -  **Scene**: Ambient lighting, sky properties, shadows.
 -  **Physics**: Gravity, time step, physics engine.
 -  **Models**: Collection of links, collision objects, joints, and sensors.
--  **Lights**: Point, sport, and directional light sources.
+-  **Lights**: Point, spot, and directional light sources.
 -  **Plugins**: World, model, sensor, and system plugins.
 
 
