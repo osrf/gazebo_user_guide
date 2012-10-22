@@ -1,6 +1,6 @@
 Installation {#installation}
 ============
-This chapter will tell you how to install Gazebo. 
+This chapter provides installation requirements and procedures.  
 
 
 ### In this chapter:

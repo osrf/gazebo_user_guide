@@ -7,12 +7,11 @@ This page details how developers should go about creating, and contributing code
 
 Before embarking on a project to add a new feature to Gazebo, make sure no
 one else is doing the same thing. Send a quick email to the Gazebo mailing
-list expressing your interest and idea. Someone will get back to you shortly
-about your idea.
+list (gazebo-list@kforge.ros.org) expressing your interest and idea, and someone will get back to you shortly.
   
 ## Writing your Code 
 
-When writing your code, make sure you abide by our [style guide](modifying__style.html).
+When writing your code, make sure you abide by our [Style Guide](modifying__style.html).
 
 ### Compile Time Tests
 
@@ -40,7 +39,7 @@ All code should have a corresponding unit or regression test. Gazebo uses
 basic functionality of code, and regression tests check behavior. For
 example, a unit test may test the math library for correctness, and
 a regression test could check that a robot travels the correct distance
-given a fixed velocity and time. Unit tests should be place in the
+given a fixed velocity and time. Unit tests should be placed in the
 `<gazebo_sources>/test/unit/` directory, and regression tests in
 `<gazebo_sources>/test/regression/`. 
 
