@@ -20,7 +20,7 @@ produce no warnings nor errors during compile.
 
 ### Static Tests
 
-Static code checking analyzes your code for bugs, such as potential memory leaks and style. The Gazebo static code checker uses cppcheck and a modified cpplint. You'll need to install cppcheck on your system. Ubuntu users can install via:
+Static code checking analyzes your code for bugs, such as potential memory leaks, and style. The Gazebo static code checker uses cppcheck and a modified cpplint. You'll need to install cppcheck on your system. Ubuntu users can install via:
 
         sudo apt-get install cppcheck
 
