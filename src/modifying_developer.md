@@ -16,11 +16,11 @@ When writing your code, make sure you abide by our [Style Guide](modifying__styl
 ### Compile Time Tests
 
 Gazebo uses a strict set of warning flags during compile. All code must 
-produce no warnings or errors during compile.
+produce no warnings nor errors during compile.
 
 ### Static Tests
 
-Static code checking analyzes your code for bugs, such as potential memory leaks, and style. The Gazebo static code checker uses cppcheck, and a modified cpplint. You'll need to install cppcheck on your system. Ubuntu users can install via:
+Static code checking analyzes your code for bugs, such as potential memory leaks and style. The Gazebo static code checker uses cppcheck and a modified cpplint. You'll need to install cppcheck on your system. Ubuntu users can install via:
 
         sudo apt-get install cppcheck
 
@@ -40,7 +40,7 @@ basic functionality of code, and regression tests check behavior. For
 example, a unit test may test the math library for correctness, and
 a regression test could check that a robot travels the correct distance
 given a fixed velocity and time. Unit tests should be placed in the
-`<gazebo_sources>/test/unit/` directory, and regression tests in
+`<gazebo_sources>/test/unit/` directory and regression tests in
 `<gazebo_sources>/test/regression/`. 
 
 #### Running Tests
