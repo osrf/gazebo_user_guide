@@ -44,8 +44,9 @@ given a fixed velocity and time. Unit tests should be placed in the
 `<gazebo_sources>/test/regression/`. 
 
 #### Running Tests
-In your Gazebo build directory run `make test`:
-        make test
+In your Gazebo build directory run: 
+        
+	make test
 
 All the tests should pass. If they do not, you can run and debug the tests individually. For example, to run the transport test from your build directory:
 
