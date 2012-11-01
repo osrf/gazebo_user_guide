@@ -24,8 +24,27 @@ The Tree lists the models in the world, and allows users to change a variety of 
 ### World Tab
 This tab is divided into Scene, Physics, Models, and Lights. Each section contains relevant parameters that can be altered by the user. These parameters appear in the bottom half of the Tree when an item is selected. 
 
+#### Scene Item
+
+Left-clicking on the scene item in the Tree will display properties associated with the look of the world. These properties include ambient color, sky parameters, and background color (if the sky is disabled).
+
+#### Physics Item
+
+Left-clicking on the physics item in the Tree will display properties associated with the physics engine. These properties include the physics engine update rate, the gravity vector, and other parameters specific to each physics engine.
+
+**Tip:** Setting the update rate to be one over the time step will force Gazebo to run no faster than real-time.
+
+#### Models Item
+
+The models item contains the list of all models and their links. Left-clicking on a model or one of its links will display a list of properties associated with the selection.
 
 Right-clicking on a model in the Models section gives you three options: Move to, Delete, Control Joints. The first moves the view to be directly in front of that model. The second option deletes the model, and the third provides information on joint control.
+
+#### Lights Item
+
+The lights item contains the list of all lights in the world. Left-clicking
+on a light will display a list of properties associated with the selection.
+These properties include the lights color, attenuation, and range.
 
 
 ### Insert Tab
@@ -51,31 +70,26 @@ Users can start, pause and step through the simulation with the clock, located a
 
 ![Clock](Clock.png "Clock")
 
-**Real Time Factor:** Displays how fast or slow the simulation is running in comparison to real time (which is 1).
+**Real Time Factor:** Displays how fast or slow the simulation is running in comparison to real time. A real time factor of 1.0 indicates that simulation is running at real-time, a factor less than 1.0 indicates simulation is running slower than real time, and greater then 1.0 indicates faster than real time.
 
 **Sim Time:** Displays how long the simulation has been running, based on the Real Time Factor.
 
-**Real Time:** Displays how long the simulation has been running, based on real time.
+**Real Time:** Displays how long the simulation has been running. This value is computed by multiplying the number of simulation steps that have occurred by the physics step size.
 
 
 ## Menu
 
-The menu options are as follows: **NATE, PLEASE PUT EACH ONE ON A SEPARATE LINE WITH NO SPACE BETWEEN, I CAN'T FIGURE IT OUT**
+The menu options are as follows:
 
-File --> Save World As: Saves the current world to file
-File --> Quit: Bet you can't guess!
-
-Edit --> Reset Model Poses: Resets all models to their position when they were first inserted
-Edit --> Reset World: Resets model poses AND time
-
-View --> Grid: Checking/unchecking this reveals/hides the grid on the ground plane
-View --> Reset View: Returns the view to a default view 
-View --> Full Screen: Puts the World View into fullscreen
-View --> Orbit View Control: **NATE TODO**
-
-
+> File --> Save World As: Saves the current world to file<br/>
+> File --> Quit: Bet you can't guess!<br/>
+> Edit --> Reset Model Poses: Resets all models to their position when they were first inserted<br/>
+> Edit --> Reset World: Resets model poses AND time<br/>
+> View --> Grid: Checking/unchecking this reveals/hides the grid on the ground plane<br/>
+> View --> Reset View: Returns the view to a default view <br/>
+> View --> Full Screen: Puts the World View into fullscreen<br/>
+> View --> Orbit View Control: Put mouse camera control into the default orbit mode<br/>
 <!--Mention Snap to Grid -->
-
 
 
 <!-- **Coming in a future release…** 
@@ -83,8 +97,3 @@ View --> Orbit View Control: **NATE TODO**
 The Text Editor
 
 The Console/Debug Window -->
-
-
-
-
-
