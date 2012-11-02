@@ -10,7 +10,7 @@ Gazebo developers must add the following comment block to the top of each file c
 /*
  * Software License Agreement (Apache License)
  * 
- * Copyright 2011 <your_name>
+ * Copyright [yyyy] <your_name>
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

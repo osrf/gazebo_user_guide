@@ -6,11 +6,11 @@ Gazebo uses XML to load and save information about a simulation world or model. 
 -  **Scene**: Ambient lighting, sky properties, shadows.
 -  **Physics**: Gravity, time step, physics engine.
 -  **Models**: Collection of links, collision objects, joints, and sensors.
--  **Lights**: Point, sport, and directional light sources.
+-  **Lights**: Point, spot, and directional light sources.
 -  **Plugins**: World, model, sensor, and system plugins.
 
 
-SDF is easily extensible, self-descriptive, and a command line tool (gzsdf) can update old versions of SDF to the latest version. 
+SDF is easily extensible and self-descriptive, and a command line tool (gzsdf) can update old versions of SDF to the latest version. 
 
 
 The complete description of the SDF format is located at http://gazebosim.org/sdf

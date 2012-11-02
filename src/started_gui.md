@@ -92,8 +92,14 @@ The menu options are as follows:
 <!--Mention Snap to Grid -->
 
 
+
 <!-- **Coming in a future release…** 
 
 The Text Editor
 
 The Console/Debug Window -->
+
+
+
+
+

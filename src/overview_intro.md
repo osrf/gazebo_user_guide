@@ -4,7 +4,7 @@ Introduction to Gazebo {#overview__intro}
 
 ### What is Gazebo?
 
-Gazebo is a multi-robot simulator for outdoor environments. Like Stage (part
+Gazebo is a multi-robot simulator for outdoor and indoor environments. Like Stage (part
 of the [Player](http://playerstage.sourceforge.net) project), [Gazebo](http://gazebosim.org) is capable of simulating a population of
 robots, sensors and objects, but does so in a three-dimensional world. It
 generates both realistic sensor feedback and physically-plausible
@@ -36,11 +36,11 @@ be created in which subjects interact with robots in a realistic manner.
 Additionally, Gazebo has been used to compare algorithms for such things as
 navigation and grasping in a controlled environment. 
 
-### What can I do with Gazebo
+### What can I do with Gazebo?
 
 Gazebo has historically been used as a research and developement tool for robotic researchers and engineers. Over the years, Gazebo's functionality has grown to encompass the following use cases:
 
- * Rapid prototyping: Design and develop robot and robot controllers with interfaces to [ROS](http://www.ros.org/wiki/gazebo) and [Solidworks](http://www.ros.org/wiki/sw_urdf_exporter).
+ * Rapid prototyping: Design and develop robots and robot controllers with interfaces to [ROS](http://www.ros.org/wiki/gazebo) and [Solidworks](http://www.ros.org/wiki/sw_urdf_exporter).
  * Custom UI: Create your own interfaces to Gazebo for personalized user interaction, or research studies.
  * Legged locomotion: Design and test legged robot locomotion.
  * Robot competition: Run team competitions in soccer or outdoor environments.
@@ -50,7 +50,7 @@ Gazebo has historically been used as a research and developement tool for roboti
 
 ### Gazebo in the Future
 
-Gazebo is under active development at the Open Source Robotics Foundation.
+Gazebo is under active development at the [Open Source Robotics Foundation] (http://osrfoundation.org/).
 We are continually fixing bugs, and adding new features. If you have feature
 requests, need help, or have bugs to report please refer to the [Support
 page] (http://gazebosim.org/support.html).
