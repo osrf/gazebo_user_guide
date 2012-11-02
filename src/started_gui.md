@@ -60,7 +60,7 @@ Users can start, pause and step through the simulation with the clock, located a
 
 ## Menu
 
-The menu options are as follows: **NATE, PLEASE PUT EACH ONE ON A SEPARATE LINE WITH NO SPACE BETWEEN, I CAN'T FIGURE IT OUT**
+The menu options are as follows: 
 
 File --> Save World As: Saves the current world to file
 File --> Quit: Bet you can't guess!
