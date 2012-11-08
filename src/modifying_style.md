@@ -5,7 +5,17 @@ Gazebo uses C++ as its primary development language. [Google's style guide](http
 
 The goal of this guide is to manage this complexity by describing in detail the dos and don'ts of writing C++ code. These rules exist to keep the code base manageable while still allowing coders to use C++ language features productively."
 
-For the most part, Gazebo adhers to the [Google C++ style guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml). The rest of this document covers instances where Gazebo differs.
+For the most part, Gazebo adheres to the [Google C++ style guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml). The rest of this document covers instances where Gazebo differs.
+
+## Checking your code
+
+Gazebo maintains a shell script that can be used to check your codes style.
+
+In the root of the Gazebo source directory, run:
+
+    sh tools/code_check.sh
+
+The output should produce no errors.
 
 ## Naming 
 
@@ -45,7 +55,7 @@ Each parameter must be suffixed with an underscore, and must be camelCased.
 public: void MyClass::MyMemberFunction(int _value)
 ~~~
 
-Pointer and reference symbols must be placed next ot the parameter name.
+Pointer and reference symbols must be placed next to the parameter name.
 
 ~~~
 Example: public: void MyMemberFunction(int *_value)
@@ -91,10 +101,22 @@ The class declaration should be proceeded by the follow doxygen comments:
 /// \addtogroup gazebo_<groupname>
 /// \{
 
-/// \class <class_name> <class_name.hh> <sub_folder>/<class_name.hh>
+/// \class <class_name> <class_name.hh> <sub_folder>/<groupname.hh>
 /// \brief A brief description of the class
 ///
 /// A detailed description of the class
+\endverbatim
+
+Example:
+
+\verbatim
+/// \addtogroup gazebo_physics
+/// \{
+
+/// \class World World.hh physics/physics.hh
+/// \brief My world class brief description. 
+///
+/// My world class detailed description. 
 \endverbatim
 
 ### Member Function
