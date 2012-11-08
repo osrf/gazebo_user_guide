@@ -1,23 +1,27 @@
 Style Guide {#modifying__style}
 ==
 
-Gazebo uses C++ as its primary development language. [Google's style guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml) has said it best with, "As every C++ programmer knows, the language has many powerful features, but this power brings with it complexity, which in turn can make code more bug-prone and harder to read and maintain.
+Gazebo uses C++ as its primary development language. [Google's style guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml) says it best:
 
-The goal of this guide is to manage this complexity by describing in detail the dos and don'ts of writing C++ code. These rules exist to keep the code base manageable while still allowing coders to use C++ language features productively."
+> As every C++ programmer knows, the language has many powerful features, but this power brings with it complexity, which in turn can make code more bug-prone and harder to read and maintain.
+> 
+> The goal of this guide is to manage this complexity by describing in detail the dos and don'ts of writing C++ code. These rules exist to keep the code base manageable while still allowing coders to use C++ language features productively.
 
 For the most part, Gazebo adheres to the [Google C++ style guide](http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml). The rest of this document covers instances where Gazebo differs.
 
 ## Checking your code
 
-Gazebo maintains a shell script that can be used to check your codes style.
+Gazebo includes a shell script that can be used to check your code style.
 
 In the root of the Gazebo source directory, run:
 
     sh tools/code_check.sh
 
-The output should produce no errors.
+The output should produce no errors.  This script is also run by the [continuous integration system](http://build.osrfoundation.org) that builds and tests Gazebo.
 
 ## Naming 
+
+We first define the kinds of naming schemes that are used:
 
 - CamelCased: The first letter of each word is capitalized.
 - camelCased: The first left of each word after the first is capitalized.
@@ -32,10 +36,13 @@ A class name is CamelCased.
 
 A member function is CamelCased.
 
-A member function definition is preceded by its classification (public, protected, private).
+Every member function definition is preceded by an explicit classification (public, protected, or private). E.g.:
 
 ~~~
-public: void MyMemberFunction()
+public: void MyPublicMemberFunction();
+public: void MyOtherPublicMemberFunction();
+private: void MyPrivateMemberFunction();
+private: void MyOtherPrivateMemberFunction();
 ~~~
 
 A member function implementation is preceded by a row of 50 forward slashes and a newline.
@@ -49,38 +56,39 @@ void MyClass::MyMemberFunction()
 
 ### Function parameters
 
-Each parameter must be suffixed with an underscore, and must be camelCased.
+Each parameter is prefixed with an underscore and is camelCased.
 
 ~~~
 public: void MyClass::MyMemberFunction(int _value)
 ~~~
 
-Pointer and reference symbols must be placed next to the parameter name.
+Pointer and reference symbols are placed next to the parameter name.
 
 ~~~
-Example: public: void MyMemberFunction(int *_value)
+Example: public: void MyMemberFunction(int *_value);
+Example: public: void MyOtherMemberFunction(const std::string &_str);
 ~~~
 
 ### Member Attributes
 
-A member attribute must be camelCased.
+Member attribute are camelCased.
 
-Use of a member attribute is preceded by `this->`.
+Use of a member attribute is explicitly preceded by `this->`.
 ~~~{.cc}
 void MyClass::MyMemberFunction()
 {
-  this->myMemberAttribute;
+  this->myMemberAttribute = 0;
 }
 ~~~
 
 ### Files
 
-A header file has the `.hh` suffix.
-A source file has the `.cc` suffix.
+Header files have the `.hh` suffix.
+Source files have the `.cc` suffix.
 
 ### \#ifndef Guards
 
-All header files must be protected against multiple inclusion by #ifndef guards of the form: `_CLASSNAME_HH_`.
+All header files are protected against multiple inclusion by #ifndef guards of the form: `_CLASSNAME_HH_`.
 
 ~~~{.cc}
 #ifndef _MYCLASS_HH_
@@ -95,7 +103,8 @@ Never use inline comments.
 
 ### Class Documentation
 
-The class declaration should be proceeded by the follow doxygen comments:
+Class declarations are preceeded by [Doxygen](http://www.doxygen.org) 
+comments of the following form:
 
 \verbatim
 /// \addtogroup gazebo_<groupname>
@@ -121,7 +130,8 @@ Example:
 
 ### Member Function
 
-Each function within a class must have the following doxygen comments.
+Functions within a class are preceeded by [Doxygen](http://www.doxygen.org) 
+comments of the following form:
 
 \verbatim
 /// \brief A brief description of the function
