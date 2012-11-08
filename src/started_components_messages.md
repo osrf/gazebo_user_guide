@@ -1,10 +1,15 @@
 Messages {#started__components__messages}
 ======================
 
- - What messages are
- - Built in messages
- - Defining your own messages outside of gazebo
+Gazebo uses a socket-based message passing system based on Google Protobuf
+to handle inter-process communication.
 
-PERHAPS A DIAGRAM HERE (WORK WITH STEFFI TO GET THAT)
+## Built in Messages ##
 
+Gazebo provides many message types, which are document at [http://gazebosim.org/msgs](http://gazebosim.org/messages)
 
+## Custom Messages ##
+
+You can create your own message types by using the Protobuf syntax. An
+example of this can be found in the Gazebo sources in the
+`examples/plugins/custom_messages` directory.
