@@ -6,7 +6,7 @@ to handle inter-process communication.
 
 ## Built in Messages ##
 
-Gazebo provides many message types, which are document at [http://gazebosim.org/msgs](http://gazebosim.org/messages)
+Gazebo provides many message types, which are document at [http://gazebosim.org/msgs](http://gazebosim.org/msgs)
 
 ## Custom Messages ##
 
