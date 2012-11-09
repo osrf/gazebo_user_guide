@@ -21,7 +21,7 @@ friction), such as a robot upper arm or lower arm
 * **joint:** a connection between two links, such as a robot elbow
 * **sensor:** a device that gathers information about the environment, such
 as a laser range-finder or camera
-* **collision:** the "shape" of a link for the purposes of determining how
+* **collision:** the "shape" of a link for the purpose of determining how
 it physically interacts with other objects in the world; e.g., a robot
 upper arm's collision body might be a cylinder
 * **visual:** the "shape" of a link for the purposes of displaying it to
