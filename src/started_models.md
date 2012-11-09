@@ -2,7 +2,7 @@ Models {#started__models}
 ======================
 Fundamentally, simulation is about *modeling*: capturing the physical
 properties of an object, process, or system in a set of relationships,
-rules, and parameters that be written down (and understood by a computer).
+rules, and parameters that can be written down (and understood by a computer).
 Much of Gazebo is concerned with building, storing, loading, instantiating,
 and using models.
 
@@ -28,7 +28,7 @@ upper arm's collision body might be a cylinder
 the user and showing it (most) sensors; e.g., a robot upper arm's visual
 body might be a carefully detailed 3-D mesh
 
-These and other properties of a model are written using SDF and stored in
+These and other properties of a model are written using SDF and are stored in
 files, either locally on the user's machine or in the online 
 [model database](@ref started__models__database).  
 [Building a model](@ref started__models__building) is the process of writing that SDF file.  Models

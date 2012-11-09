@@ -24,7 +24,7 @@ The output should produce no errors.  This script is also run by the [continuous
 We first define the kinds of naming schemes that are used:
 
 - CamelCased: The first letter of each word is capitalized.
-- camelCased: The first left of each word after the first is capitalized.
+- camelCased: The first letter of each word after the first is capitalized.
 - under_score: All lower case with words separated by an underscore.
 - ALL_CAPITALS: All capital letters with words separated by an underscore.
 
@@ -45,14 +45,14 @@ private: void MyPrivateMemberFunction();
 private: void MyOtherPrivateMemberFunction();
 ~~~
 
-A member function implementation is preceded by a row of 50 forward slashes and a newline.
+A member function implementation is preceded by a row of 50 forward slashes and a new line.
 
-~~~
+\verbatim
 //////////////////////////////////////////////////
 void MyClass::MyMemberFunction()
 {
 }
-~~~
+\endverbatim
 
 ### Function parameters
 
@@ -71,7 +71,7 @@ Example: public: void MyOtherMemberFunction(const std::string &_str);
 
 ### Member Attributes
 
-Member attribute are camelCased.
+Member attributes are camelCased.
 
 Use of a member attribute is explicitly preceded by `this->`.
 ~~~{.cc}
@@ -138,11 +138,11 @@ comments of the following form:
 ///
 /// An optional detailed description. Add if the brief description is insufficient.
 /// \param[in/out] _param1 Description of _param1
-/// \param[in/out]_param2 Description of _param1
+/// \param[in/out]_param2 Description of _param2
 /// \return Description of return value if any
 \endverbatim
 
-The `[in/out]` declaration for a parameters indicates if the parameter is used for input, output, or both:
+The `[in/out]` declaration for a parameter indicates if the parameter is used for input, output, or both:
 
 - `\param[in]`: The parameter is used for input only.
 - `\param[out]`: The parameter is used for output only.

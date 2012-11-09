@@ -11,7 +11,7 @@ Architecture {#started__arch}
 
 **These libraries are used by two main processes:**
 
-+ **Server:** Runs the physics loop and generates sensors data.
++ **Server:** Runs the physics loop and generates sensor data.
   + *Executable:* `gzserver`   
   + *Libraries:* Physics, Sensors, Rendering, Transport
 
@@ -25,7 +25,7 @@ Architecture {#started__arch}
   The physics library runs the physics update cycle, loads and maintains all the models and their plugins, and is capable of saving and loading simulation state.
   Gazebo utilizes 3rd party physics engines, such as [ODE](http://opende.sourceforge.net) or [Bullet](http://bulletphysics.org), to compute the proper dynamic and kinematic effects.
 
-  > **Plugin Support:** Plugins can be loaded into the World and into individual Models.
+  > **Plugin Support:** Plugins can be loaded into the World and into individual models.
 
 ### Rendering Library
   The rendering library utilizes [OGRE](http://ogre3d.org) to visualize the
@@ -42,7 +42,7 @@ Architecture {#started__arch}
   > **Plugin Support:** Plugins can be loaded into each sensor.
 
 ### Transport Library
-  This library uses [boost::asio](http://www.boost.org/doc/libs/1_51_0/doc/html/boost_asio.html) to create and maintain socket based connections between Gazebo components. [Google protobuf](http://code.google.com/p/protobuf/) provides the message serialization and deserialization infrastructure to pass data between components.
+  This library uses [boost::asio](http://www.boost.org/doc/libs/1_51_0/doc/html/boost_asio.html) to create and maintain socket-based connections between Gazebo components. [Google protobuf](http://code.google.com/p/protobuf/) provides the message serialization and deserialization infrastructure to pass data between components.
 
   > **Plugin Support:** None
 
