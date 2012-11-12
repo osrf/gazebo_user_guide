@@ -1,16 +1,16 @@
 Building a Model {#started__models__building}
 ======================
 
-Models can range from simple shapes to complex robots. The name model refers
+Models can range from simple shapes to complex robots. The name **model** refers
 the the `<model>` [SDF](http://gazebosim.org/sdf) tag, and should
 be thought of as a collection of links, joints, collision objects, visuals, and
-plugins.  Generating a model file can be difficult depending on the complexity
-of the desired model. This page will offer some tips on how to build your
-models.
+plugins.  Creating a model file can be difficult depending on the complexity
+of the desired model. This page will offer some tips on how to build a
+model.
 
 ### Components of Models ###
 
-> **Links:** A link contains the physical properties of one body of the model. This can be a wheel, or a link in a joint chain. Each link may contain many collision and visual elements. Try to reduce the number of links in your models in order to improve performance and stability. For example, a table model could consist of 5 links (4 for the legs and 1 for the top) connected via joints. However, this is overly complex, especially since the joints will never move. Instead, create the table with 1 link and 5 collision elements.
+> **Link:** A link contains the physical properties of one body of the model. This can be a wheel, or a link in a joint chain. Each link may contain many collision and visual elements. Try to reduce the number of links in your models in order to improve performance and stability. For example, a table model could consist of 5 links (4 for the legs and 1 for the top) connected via joints. However, this is overly complex, especially since the joints will never move. Instead, create the table with 1 link and 5 collision elements.
 
 > **Collision:** A collision element encapsulates a geometry that is used to collision checking. This can be a simple shape (which is preferred), or a triangle mesh (which consumes greater resources). A link may contain many collision elements.
 
@@ -92,7 +92,7 @@ ground plane.
 
 **Step 3: Add to the .model file**
 
-With a working `.model` file, slowly start adding in more complexity. With each
+With a working model file, slowly start adding in more complexity. With each
 new addition, load the model using the graphical client to make sure your model
 is correct.
 
