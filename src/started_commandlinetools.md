@@ -2,13 +2,13 @@ Command Line Tools {#started__commandlinetools}
 ======================
 Gazebo offers a few command line tools for interacting with the simulation world.
 
-* **World Statistics**
+* **World Statistics** - check general simulator status and performance.
 
-* **Topic Info**
+* **Topic Info** - Introspection tools for viewing gazebo transport system status.
 
-* **SDF Utility**
+* **SDF Utility** - Tool for manipulating SDF model files.
 
-* **Factory**
+* **Factory** - Simple tool to spawn or delete models in simulation in command line.
 
 
 
@@ -162,7 +162,7 @@ This tool for spawning or deleting models into or from a running Gazebo simulati
 
 > > -y [ --pose-y ] arg     set model y position.
 
-> > -z [ --pose-z ] arg     set model z positione.
+> > -z [ --pose-z ] arg     set model z position.
 
 > > -R [ --pose-R ] arg     set model roll orientation in radians.
 
@@ -172,4 +172,4 @@ This tool for spawning or deleting models into or from a running Gazebo simulati
 
 **Examples:**
 
-        gdb --args gzfactory spawn -f ~/.gazebo/models/bowl/model.sdf -m bowl -x -10 -y 0 -z 1 -R 0 -P 0 -Y 0
+        gzfactory spawn -f ~/.gazebo/models/bowl/model.sdf -m bowl -x -10 -y 0 -z 1 -R 0 -P 0 -Y 0
