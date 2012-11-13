@@ -8,22 +8,6 @@ plugins.  Creating a model file can be difficult depending on the complexity
 of the desired model. This page will offer some tips on how to build a
 model.
 
-### Components of Models ###
-
-> **Link:** A link contains the physical properties of one body of the model. This can be a wheel, or a link in a joint chain. Each link may contain many collision and visual elements. Try to reduce the number of links in your models in order to improve performance and stability. For example, a table model could consist of 5 links (4 for the legs and 1 for the top) connected via joints. However, this is overly complex, especially since the joints will never move. Instead, create the table with 1 link and 5 collision elements.
-
-> **Collision:** A collision element encapsulates a geometry that is used to collision checking. This can be a simple shape (which is preferred), or a triangle mesh (which consumes greater resources). A link may contain many collision elements.
-
-> **Visual:** A visual element is used to visualize parts of a link. A link may contain 0 or more visual elements.
-
-> **Inertial:** The inertial element describes the dynamic properties of the link, such as mass and rotational inertia matrix.
-
-> **Sensor:** A sensor collects data from the world for use in plugins. A link may contain 0 or more sensors.
-
-> **Joints:** A joint connects two links. A parent and child relationship is established along with other parameters such as axis of rotation, and joint limits.
-
-> **Plugins:** A plugin is a shared library created by a third party to control a model.
-  
 ### Building a Model ###
 
 **Step 1: Collect your meshes**
@@ -32,20 +16,16 @@ This step involves gathering all the necessary 3D mesh files that are required
 to build your model. Gazebo provides a set of simple shapes: box, sphere, and
 cylinder. If your model needs something more complex, then continue reading.
 
-Meshes come from a number of places. [Google's 3D
-Warehouse](http://sketchup.google.com/3dwarehouse) is a good repository of 3D
-models. Alternatively, you may already have the necessary files. Finally, you
-can make your own meshes using a 3D modeler such as
-[Blender](http://blender.org) or [Sketchup](http://sketchup.google.com).
+Meshes come from a number of places. [Google's 3D Warehouse](http://sketchup.google.com/3dwarehouse) is a good repository of 3D models. Alternatively, you may already have the necessary files. Finally, you can make your own meshes using a 3D modeler such as [Blender](http://blender.org) or [Sketchup](http://sketchup.google.com).
 
 Gazebo requires that mesh files be formatted as STL or Collada, with Collada
 being the preferred format. 
 
-> **Tip:** Use your 3D modeling software to move each mesh so that it is centered on the origin. This will make placement of the model in Gazebo significantly easier.
+* **Tip:** Use your 3D modeling software to move each mesh so that it is centered on the origin. This will make placement of the model in Gazebo significantly easier.
 
-> **Tip:** Collada file formats allow you to attach materials to the meshes.  Use this mechanism to improve the visual appearance of your meshes.
+* **Tip:** Collada file formats allow you to attach materials to the meshes.  Use this mechanism to improve the visual appearance of your meshes.
 
-> **Tip:** Keep meshes simple. This is especially true if you plan on using the mesh as a collision element. A common practice is to use a low polygon mesh for a collision element, and higher polygon mesh for the visual. An even better practice is to use one of the built-in shapes (box, sphere, cylinder) as the collision element. 
+* **Tip:** Keep meshes simple. This is especially true if you plan on using the mesh as a collision element. A common practice is to use a low polygon mesh for a collision element, and higher polygon mesh for the visual. An even better practice is to use one of the built-in shapes (box, sphere, cylinder) as the collision element. 
 
 
 **Step 2: Make your .model file**
