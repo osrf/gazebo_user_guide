@@ -1,8 +1,8 @@
 Tutorials {#tutorials}
 =========
 
-Tutorials available on the [Gazebo Wiki](http://gazebosim.org/wiki/Tutorials). 
-We recommend that users try not to modify Gazebo until they understand the
+Tutorials are available on the [Gazebo Wiki](http://gazebosim.org/wiki/Tutorials). 
+We recommend that users not modify Gazebo until they understand the
 concepts presented in the tutorials on the Wiki.
 
 We appreciate tutorial contributions to the Wiki. If you have a useful
