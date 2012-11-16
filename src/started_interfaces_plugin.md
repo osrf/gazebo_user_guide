@@ -11,10 +11,10 @@ Plugins are useful because they:
 Previous versions of Gazebo utilized controllers. These behaved in much the same way as plugins, but were statically compiled into Gazebo. Plugins are more flexible, and allow users to pick and choose what functionality to include in their simulations.
 
 You should use a plugin when:
- * you want to programmaticaly alter a simulation
+ * you want to programmatically alter a simulation
   * Ex: move models, respond to events, insert new models given a set of preconditions
- * you want a fast interface to gazebo, without the overhead of the transport layer
-  * Eg: No serialization and deserialization of messages.
+ * you want a fast interface to Gazebo, without the overhead of the transport layer
+  * Eg: no serialization and deserialization of messages
  * you have some code that could benefit others and want to share it
  
 ### Plugin Types
@@ -26,7 +26,7 @@ A plugin type should be chosen based on the desired functionality. Use a World p
 
 ### Creating Plugins 
 
-Plugins are designed to be simple. A bare bones world plugin contains a class with with a few member functions:
+Plugins are designed to be simple. A bare bones World plugin contains a class with a few member functions:
 
 ~~~
 #include <gazebo/gazebo.hh>
@@ -64,7 +64,7 @@ namespace gazebo
 {
 ~~~
 
-The `gazebo/gazebo.hh` file includes a set basic gazebo functions. The `gazebo/common/common.hh` file includes a set common gazebo header files. It doesn't include `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, and `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. Lastly, `<stdio.hh>` is necessary for the use of printf. Also, all plugins must be in the `gazebo` namespace.
+The `gazebo/gazebo.hh` file includes a set of basic Gazebo functions. The `gazebo/common/common.hh` file includes a set of common Gazebo header files. It doesn't include `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, and `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. Lastly, `<stdio.hh>` is necessary for the use of printf. Also, all plugins must be in the `gazebo` namespace.
 
 ~~~
   class HelloWorld : public WorldPlugin
@@ -83,7 +83,7 @@ Each plugin must inherit from a plugin type, which in this case is the `WorldPlu
             }
 ~~~
 
-The only other mandatory function is `Load` which receives an SDF element that contains the elements and attributes specified in loaded SDF file.
+The only other mandatory function is `Load` which receives an SDF element that contains the elements and attributes specified in the loaded SDF file.
 
 ~~~
   GZ_REGISTER_WORLD_PLUGIN(HelloWorld)
@@ -96,9 +96,9 @@ The following section contains instructions on how to compile this plugin.
 
 ### Compiling the Plugin
 
-Please make sure that gazebo has been properly installed, if not, visit the [[install|install page]].
+Please make sure that Gazebo has been properly installed. If not, visit the [install page] (http://gazebosim.org/wiki/Install).
 
-Create a new directory in your home directory and cd into it, for example
+Create a new directory in your home directory and cd into it, for example:
 ~~~
 mkdir -p ~/gazebo_plugin_tutorial/build
 cd ~/gazebo_plugin_tutorial
@@ -131,7 +131,7 @@ cmake ../
 make
 ~~~
 
-Compiling will result in a shared library, `~/gazebo_plugin_tutorial/build/libhello_world.so`, that can be inserted in a Gazebo simulation.
+Compiling will result in a shared library, `~/gazebo_plugin_tutorial/build/libhello_world.so`, that can be inserted into a Gazebo simulation.
 
 Lastly, add your library path to the `GAZEBO_PLUGIN_PATH`:
 ~~~
@@ -140,9 +140,9 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/gazebo_plugin_tutorial/build
 
 ### Using a Plugin
 
-Once you have a plugin compiled as a shared library (see above), you can attach it to a world or model in an SDF file (see [[sdf_format || SDF]] for more info). On startup, Gazebo parses the SDF file, locates the plugin, and loads the code. It is important that Gazebo is capable of finding the plugin. Either the full path to the plugin is specified, or the plugin exists in one of the paths in the GAZEBO_PLUGIN_PATHS environment variable.
+Once you have a plugin compiled as a shared library (see above), you can attach it to a world or model in an SDF file (see [the SDF section](@ref started__sdf) for more info). On startup, Gazebo parses the SDF file, locates the plugin, and loads the code. It is important that Gazebo is capable of finding the plugin. Either the full path to the plugin is specified, or the plugin exists in one of the paths in the GAZEBO_PLUGIN_PATHS environment variable.
 
-Example world file also found in `examples/plugins/hello_world/hello.world`
+Here's an example world file also found in `examples/plugins/hello_world/hello.world`
 ~~~
 <?xml version="1.0"?> 
 <gazebo version="1.2">
