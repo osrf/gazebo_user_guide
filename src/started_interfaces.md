@@ -19,7 +19,7 @@ should watch how you are interacting with Gazebo.  If you make unrealistic
 assumptions in the code you write to control simulated robots, you may have
 trouble transitioning to physical robots.  This problem is likely if
 important functionality is put into Gazebo plugins when there is no
-analagous environment to run that code on the robot.  For portability to
+analogous environment to run that code on the robot.  For portability to
 hardware, it is best to keep algorithms (perception, planning, etc.)
 outside Gazebo and use standard middleware (ROS, Player, etc.) to
 communicate with simulation.
