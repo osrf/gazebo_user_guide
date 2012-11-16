@@ -204,6 +204,3 @@ Msg Waiting for master
 Msg Connected to gazebo master @ http://localhost:11345
 Hello World!
 ~~~
-
-Next, we'll demonstrate how to 
-[[tutorials/plugins/model_manipulation_plugin| manipulate a model in simulation using plugins]].
