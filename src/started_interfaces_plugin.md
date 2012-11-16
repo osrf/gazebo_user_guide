@@ -29,8 +29,8 @@ A plugin type should be chosen based on the desired functionality. Use a World p
 Plugins are designed to be simple. A bare bones world plugin contains a class with with a few member functions:
 
 ~~~
-#include "gazebo/gazebo.hh"
-#include "gazebo/common/common.hh"
+#include <gazebo/gazebo.hh>
+#include <gazebo/common/common.hh>
 #include <stdio.h>
 
 namespace gazebo
@@ -56,8 +56,8 @@ The above code is also located in the Gazebo sources: `examples/plugins/hello_wo
 Let's go through the code.
 
 ~~~
-#include "gazebo/gazebo.hh"
-#include "gazebo/common/common.hh"
+#include <gazebo/gazebo.hh>
+#include <gazebo/common/common.hh>
 #include <stdio.h>
 
 namespace gazebo
