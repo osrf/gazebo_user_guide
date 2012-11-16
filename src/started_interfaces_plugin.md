@@ -1,7 +1,7 @@
 Plugin Interfaces {#started__interfaces__plugin}
 ==
 
-A plugin is a chunk of code that is compiled as a shared library and inserted into the simulation. The plugin has direct access to all the functionality of Gazebo through the standard C++ classes.
+A plugin is a chunk of code that is compiled as a shared library and inserted into the simulation. The plugin has direct access to all the functionality of Gazebo through the standard C++ classes, documented in the public [API](http://gazebosim.org/api).
 
 Plugins are useful because they:
  * let developers control almost any aspect of Gazebo
@@ -19,7 +19,7 @@ You should use a plugin when:
  
 ### Plugin Types
 
-There are currently 4 types of plugins: World, Model, Sensor, and System. Each plugin type is managed by a different component of Gazebo. 
+There are currently 5 types of plugins: World, Model, Sensor, Visual, and System. Each plugin type is managed by a different component of Gazebo. 
 For example, a Model plugin is attached to and controls a specific model in Gazebo. Similarly, a World plugin is attached to a world, and a Sensor plugin to a specific sensor. The System plugin is specified on the command line, and loads first during a Gazebo startup. This plugin gives the user control over the startup process.
 
 A plugin type should be chosen based on the desired functionality. Use a World plugin to control world properties, such as the physics engine, ambient lighting, etc. Use a Model plugin to control joints, and state of a model. Use a Sensor plugin to acquire sensor information and control sensor properties.
@@ -29,8 +29,8 @@ A plugin type should be chosen based on the desired functionality. Use a World p
 Plugins are designed to be simple. A bare bones world plugin contains a class with with a few member functions:
 
 ~~~
-#include "gazebo.hh"
-#include "common/common.h"
+#include "gazebo/gazebo.hh"
+#include "gazebo/common/common.hh"
 #include <stdio.h>
 
 namespace gazebo
@@ -56,15 +56,15 @@ The above code is also located in the Gazebo sources: `examples/plugins/hello_wo
 Let's go through the code.
 
 ~~~
-#include "gazebo.hh"
-#include "common/common.h"
+#include "gazebo/gazebo.hh"
+#include "gazebo/common/common.hh"
 #include <stdio.h>
 
 namespace gazebo
 {
 ~~~
 
-The `gazebo.hh` file includes a set basic gazebo functions. The `/common/common.h` file includes a set common gazebo header files. It doesn't include `physics/physics.h`, `rendering/rendering.h`, and `sensors/sensors.h` as those should be included on a case by case basis. Lastly, `<stdio.hh>` is necessary for the use of printf. Also, all plugins must be in the `gazebo` namespace.
+The `gazebo/gazebo.hh` file includes a set basic gazebo functions. The `gazebo/common/common.hh` file includes a set common gazebo header files. It doesn't include `gazebo/physics/physics.hh`, `gazebo/rendering/rendering.hh`, and `gazebo/sensors/sensors.hh` as those should be included on a case by case basis. Lastly, `<stdio.hh>` is necessary for the use of printf. Also, all plugins must be in the `gazebo` namespace.
 
 ~~~
   class HelloWorld : public WorldPlugin
@@ -89,7 +89,7 @@ The only other mandatory function is `Load` which receives an SDF element that c
   GZ_REGISTER_WORLD_PLUGIN(HelloWorld)
 ~~~
 
-Finally, the plugin must be registered with the simulator using the `GZ_REGISTER_WORLD_PLUGIN` macro. The only parameter to this macro is the name of the plugin class. There are matching register macros for each plugin type: `GZ_REGISTER_MODEL_PLUGIN`, `GZ_REGISTER_SENSOR_PLUGIN`, and `GZ_REGISTER_SYSTEM_PLUGIN`.
+Finally, the plugin must be registered with the simulator using the `GZ_REGISTER_WORLD_PLUGIN` macro. The only parameter to this macro is the name of the plugin class. There are matching register macros for each plugin type: `GZ_REGISTER_MODEL_PLUGIN`, `GZ_REGISTER_SENSOR_PLUGIN`, `GZ_REGISTER_VISUAL_PLUGIN`, and `GZ_REGISTER_SYSTEM_PLUGIN`.
 
 The following section contains instructions on how to compile this plugin.
 
@@ -145,47 +145,19 @@ Once you have a plugin compiled as a shared library (see above), you can attach 
 Example world file also found in `examples/plugins/hello_world/hello.world`
 ~~~
 <?xml version="1.0"?> 
-<gazebo version="1.0">
+<gazebo version="1.2">
   <world name="default">
-    <scene>
-      <ambient rgba="0.1 0.1 0.1 1"/>
-      <background rgba="0 0 0 1"/>
-      <shadows enabled="true"/>
-    </scene>
-
-    <physics type="ode">
-      <gravity xyz="0 0 -9.8"/>
-      <ode>
-        <solver type="quick" dt="0.001" iters="100" sor="1.3"/>
-        <constraints cfm="0.0" erp="0.2" contact_max_correcting_vel="100.0" contact_surface_layer="0.001"/>
-      </ode>
-    </physics>
 
     <!-- Ground Plane -->
-    <model name="plane1_model" static="true">
-      <link name="body">
-        <collision name="geom_1">
-          <geometry>
-            <plane normal="0 0 1"/>
-          </geometry>
-        </collision>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
 
-        <visual name="visual_1" cast_shadows="false">
-          <geometry>
-            <plane normal="0 0 1"/>
-          </geometry>
-          <material script="Gazebo/Grey"/>
-        </visual>
-      </link>
-    </model>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
 
-    <light type="directional" name="sun" cast_shadows="true">
-      <origin pose="0 0 10 0 0 0"/>
-      <diffuse rgba="0.8 0.8 0.8 1"/>
-      <specular rgba="0 0 0 1"/>
-      <attenuation range="20" constant="0.8" linear="0.01" quadratic="0.0"/>
-      <direction xyz="1.0 1.0 -1.0"/>
-    </light>
     <plugin name="hello_world" filename="libhello_world.so"/>
 </gazebo>
 ~~~
