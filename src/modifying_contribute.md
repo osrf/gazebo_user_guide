@@ -38,3 +38,10 @@ Gazebo is an open source project based on the [Apache License Version 2.0](http:
   maintained by hardworking developers for everyone's benefit.
 If you would like to contribute software patches, please join the [Gazebo project on Bitbucket.org](https://bitbucket.org/osrf/gazebo).
 
+### Forking, Patching and Pull Requests
+
+Gazebo is hosted in [Bitbucket](https://bitbucket.org/osrf/gazebo) using [Mercurial version control system](http://mercurial.selenic.com/).
+In order to contribute patches or new features into the main development branch in Gazebo, we recommend forking from the "default" branch of Gazebo.  
+Please see [forking and pull request help pages](https://confluence.atlassian.com/display/BITBUCKET/Fork+a+Repo,+Compare+Code,+and+Create+a+Pull+Request)
+as provided by Bitbucket for details.
+
