@@ -2,20 +2,20 @@ Command Line Tools {#started__commandlinetools}
 ======================
 Gazebo offers a few command line tools for interacting with the simulation world.
 
-* **World Statistics** - check general simulator status and performance.
+* **World Statistics** - Check general simulator status and performance.
 
-* **Topic Info** - Introspection tools for viewing gazebo transport system status.
+* **Topic Info** - Introspection tools for viewing Gazebo transport system status.
 
 * **SDF Utility** - Tool for manipulating SDF model files.
 
-* **Factory** - Simple tool to spawn or delete models in simulation in command line.
+* **Factory** - Simple tool to spawn or delete models in simulation from the command line.
 
 
 
 World Statistics
 --
 
-The `gzstats` tool displays general statistics about currently running world.
+The `gzstats` tool displays general statistics about the currently running world.
 
 **Usage:**
 
@@ -83,7 +83,7 @@ The `gztopic` tool displays information about published topics.
 
 SDF Utility
 --
-The `gzsdf` tool provides information about SDF files, converts it from old or deprecated formats.
+The `gzsdf` tool provides information about SDF files, and converts them from old or deprecated formats.
 
 **Usage:**
 
@@ -91,15 +91,15 @@ The `gzsdf` tool provides information about SDF files, converts it from old or d
 
 > Commands:
 
-> > describe [SDF version]     Print the SDF format.
+> > describe \<SDF version\>:     Print the SDF format
 
-> > convert [file]             In place conversion to the latest format.
+> > convert \<file\>:             In-place conversion to the latest format
 
-> > doc [SDF version]          Print HTML SDF.
+> > doc \<SDF version\>:          Print HTML SDF
 
-> > check [file] [SDF version] Check the SDF format for the given file.
+> > check \<file\> \<SDF version\>: Check the SDF format for the given file
 
-> > print [SDF verison]         Prints SDF, useful for  debugging and as a conversion tool.
+> > print \<SDF version\>:         Prints SDF, useful for  debugging and as a conversion tool
 
 
 **Examples:**
@@ -137,38 +137,38 @@ The `gzsdf` tool provides information about SDF files, converts it from old or d
 
 Factory
 --
-This tool for spawning or deleting models into or from a running Gazebo simulation.
+This tool is for spawning or deleting models into or from a running Gazebo simulation.
 
 
 **Usage:**
 
 >   gzfactory <spawn|delete> [options]
 
-> >   spawn   : Spawn new model. Must specify a SDF model file.
+> >   spawn   : Spawn new model. Must specify an SDF model file.
 
 > >   delete  : Delete existing model. Must specify model name.
 
 > Allowed options:
 
-> > -h [ --help ]           produce this help message
+> > -h [ --help ]:           Produce this help message
 
-> > -f [ --sdf ] arg        SDF model file.
+> > -f [ --sdf ] <arg>:        SDF model file
 
-> > -w [ --world-name ] arg Name of Gazebo world.
+> > -w [ --world-name ] <arg>: Name of Gazebo world
 
-> > -m [ --model-name ] arg Model name.
+> > -m [ --model-name ] <arg>: Model name
 
-> > -x [ --pose-x ] arg     set model x position.
+> > -x [ --pose-x ] <arg>:     Set model x position
 
-> > -y [ --pose-y ] arg     set model y position.
+> > -y [ --pose-y ] <arg>:     Set model y position
 
-> > -z [ --pose-z ] arg     set model z position.
+> > -z [ --pose-z ] <arg>:     Set model z position
 
-> > -R [ --pose-R ] arg     set model roll orientation in radians.
+> > -R [ --pose-R ] <arg>:     Set model roll orientation in radians
 
-> > -P [ --pose-P ] arg     set model pitch orientation in radians.
+> > -P [ --pose-P ] <arg>:     Set model pitch orientation in radians
 
-> > -Y [ --pose-Y ] arg     set model yaw orientation in radians.
+> > -Y [ --pose-Y ] <arg>:     Set model yaw orientation in radians
 
 **Examples:**
 

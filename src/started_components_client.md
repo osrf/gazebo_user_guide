@@ -14,5 +14,5 @@ The client my be run using:
 
 By default the client will try to connect to a master in order to discover
 a sever. The location of the master, which is automatically started be the
-server is run, is specified using the GAZEBO_MASTER_URI environment
+server when it is run, is specified using the GAZEBO_MASTER_URI environment
 variable.

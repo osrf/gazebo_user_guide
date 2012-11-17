@@ -1,6 +1,0 @@
-Make a Simple Gripper {#tutorials__using__makemodel__gripper}
-=====================
-
-We'll now make a simple gripper….screenshot…
-
-…tutorial…

@@ -1,6 +1,0 @@
-Make a SCARA Arm {#tutorials__using__makemodel__arm}
-=====================
-
-Finally, we'll make a SCARA arm…screenshot…
-
-…tutorial…

@@ -14,9 +14,8 @@ The components of a simulation environment consist of:
     - [Sensors](@ref started__models__components): Collect, process, and output data.
 - [Plugins](@ref started__components__plugins): Code attached to a World, Model, Sensor, of the simulator itself.
 
-The above hierarchy indicates the parent-child relationship between components.
-
-A set of components define how simulation is run:
+The above hierarchy indicates the parent-child relationship between components. A set of components define how a simulation is run. 
+A simulation run involves mutiple processes working together:
 
 - [Server](@ref started__components__server): The executable that runs the physics engine and sensor generation.
 - [Client](@ref started__components__client): This is the graphical interface, command line tools, and custom programs that interface to the Server.

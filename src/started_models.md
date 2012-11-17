@@ -13,26 +13,9 @@ describing simulation environments and objects.  For the full definition of
 what can be specified for a model, consult the [SDF
 documentation](http://gazebosim.org/sdf/1.2.html).
 
-The most commonly defined [components](@ref started__models__components) of
-a model are:
-
-* **link:** a rigid body with physical properties (e.g., mass, inertia,
-friction), such as a robot upper arm or lower arm
-* **joint:** a connection between two links, such as a robot elbow
-* **sensor:** a device that gathers information about the environment, such
-as a laser range-finder or camera
-* **collision:** the "shape" of a link for the purpose of determining how
-it physically interacts with other objects in the world; e.g., a robot
-upper arm's collision body might be a cylinder
-* **visual:** the "shape" of a link for the purposes of displaying it to
-the user and showing it (most) sensors; e.g., a robot upper arm's visual
-body might be a carefully detailed 3-D mesh
-
-These and other properties of a model are written using SDF and are stored in
-files, either locally on the user's machine or in the online 
-[model database](@ref started__models__database).  
-[Building a model](@ref started__models__building) is the process of writing that SDF file.  Models
-can be used hierarchically: one model can include another model as a child,
+The [components](@ref started__models__components) and other properties of
+a model are written using SDF and are stored in files, either locally on
+the user's machine or in the online [model database](@ref started__models__database). [Building a model](@ref started__models__building) is the process of writing that SDF file.  Models can be used hierarchically: one model can include another model as a child,
 such as when attaching a pre-defined model of a laser range-finder to a new
 robot.  And models can be multiply instantiated, which is useful if, for
 example, you want two copies of a robot in your world.  Models are easy to

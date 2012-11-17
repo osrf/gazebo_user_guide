@@ -2,14 +2,14 @@ Model Database {#started__models__database}
 ==
 
 Models in Gazebo define a physical entity with dynamic, kinematic, and visual
-properties. In addition a model may have one or more plugins which effect the
-model's behavior. A model can represent anything from a shape to a complex
-robot, even the ground is a model. 
+properties. In addition, a model may have one or more plugins, which affect the
+model's behavior. A model can represent anything from a simple shape to a complex
+robot; even the ground is a model. 
 
 Gazebo relies on a database to store and maintain models available for use
-within simulation. The model database is a community supported resource, so
-please upload and maintain models that you need
-
+within simulation. The model database is a community-supported resource, so
+please upload and maintain models that you create and use.
+T
 ## The Model Database Repository
 
 The model database is a bitbucket repository found [here](https://bitbucket.org/osrf/gazebo_models).
@@ -38,17 +38,17 @@ The structure is as follows (in this example the database has only one model cal
         * *meshes* : A directory for all COLLADA and STL files 
         * *materials* : A directory which should only contain the `textures` and `scripts` subdirectories
             * *textures* : A directory for image files (jpg, png, etc).
-            * *scripts* : A directory for Ogre material scripts
+            * *scripts* : A directory for OGRE material scripts
         * *plugins*: A directory for plugin source and header files
 
 ### Plugins Directory
-This is an optional directory that contains all the plugins for the model.
+This is an optional directory that contains all of the plugins for the model.
 
 ### Meshes Directory
-This is an optional directory that contains all the collada and/or stl files for the model.
+This is an optional directory that contains all of the COLLADA and/or STL files for the model.
 
 ### Material Directory
-This is an optional directory that contains all the textures images and Ogre Scripts for the model. Texture images must be placed in the `textures` subdirectory, and OGRE script files in the `scripts` directory.
+This is an optional directory that contains all of the textures, images, and OGRE scripts for the model. Texture images must be placed in the `textures` subdirectory, and OGRE script files in the `scripts` directory.
 
 ### Database Manifest XML
 This is the `manifest.xml` file in the root of the model database. This file contains license information for the models, a name for the database, and a list of all the valid models.
@@ -126,7 +126,7 @@ The format of this `manifest.xml` is:
 *  <*description*> *required*
 
    Description of the model should include:
-   >  * What the model is (robot, table, cup)
+   >  * What the model is (e.g., robot, table, cup)
    >  * What the plugins do (functionality of the model)
 
 *  <*depend*> *optional*
@@ -152,17 +152,15 @@ description of the model.
 1. Clone the `gazebo_models` repository:
 
         hg clone http://gazebosim.org/models
-
-1. Create a new model directory within the repository
+2. Create a new model directory within the repository:
 
         cd gazebo_models
         mkdir my_new_model
-
-1. Create the `manifest.xml` file. See above.
-1. Create the `model.sdf` file. See above.
-1. Put all the necessary materials, textures, meshes, and plugins in the appropriate directories.
-1. Add your model to the main `manifest.xml` file found in the root of the `gazebo_models` repository.
-1. Submit a [pull request](https://bitbucket.org/osrf/gazebo_models/pull-requests) through bitbucket.
+3. Create the `manifest.xml` file. See above.
+4. Create the `model.sdf` file. See above.
+5. Put all of the necessary materials, textures, meshes, and plugins in the appropriate directories.
+6. Add your model to the main `manifest.xml` file found in the root of the `gazebo_models` repository.
+7. Submit a [pull request](https://bitbucket.org/osrf/gazebo_models/pull-requests) through Bitbucket.
 
 ## GAZEBO_MODEL_DATABASE_URI and GAZEBO_MODEL_PATH
 
@@ -173,5 +171,5 @@ Gazebo uses two environment variables to find model databases.
     This is a URI that points to a model database. The default value is `http://gazebosim.org/models`
 1.  GAZEBO_MODEL_PATH
 
-    This is a colon separated list of paths that Gazebo should search for databases. Each path should point to the directory that contains the database manifest.xml.
+    This is a colon-separated list of paths that Gazebo should search for databases. Each path should point to the directory that contains the database manifest.xml.
 
