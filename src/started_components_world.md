@@ -1,21 +1,21 @@
 World {#started__components__world}
 ======================
 
-A World defines an environment and all the objects in the environment.
+A World defines an environment and all of the objects in the environment.
 A World is specified via [SDF](http://gazebosim.org/sdf), and can be edited
 and saved in the graphical interface.
 
 ## Running a World ##
 
-You can run a World, defined as an SDF file, from the command line using:
+You can run a World, defined by an SDF file, from the command line using:
 
     gazebo <world_file_name>
 
-You can find out the parameters to `gazebo` with the `-h` parameter:
+You can find out the command line arguments to `gazebo` with the `-h` argument:
 
     gazebo -h
 
-A useful parameter is to start simulation in a pause state:
+A useful parameter is to start simulation in a paused state:
 
     gazebo -u <world_file_name>
 
