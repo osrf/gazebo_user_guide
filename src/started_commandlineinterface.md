@@ -5,10 +5,10 @@ Command Line Interface {#started_commandlineinterface}
 
 ### Linux
 
-Gazebo in the Linux environment relies on a few environment variables to specify paths to various component and resource files.
+Gazebo in the Linux environment relies on a few environment variables to specify paths to various resource files.
 For a Debian system, the environment variables are set in a script called `setup.sh`.
 To invoke the script and configure the environment variables needed for Gazebo to function properly, type
- (note `1.X` should be replace by the actual Gazebo release version):
+ (note `1.X` should be replaced by the actual Gazebo release version):
 
     $ source /usr/share/gazebo-1.X/setup.sh
 
@@ -62,7 +62,7 @@ the available options are:
           -h [ --help ]           Produce this help message.
           -g [ --gui-plugin ] arg Load a plugin.
 
-*  *gazebo* starts the *Server*(gzserver) and *Client*(gzclient) in separate processes.
+*  *gazebo* starts the *Server* (gzserver) and *Client* (gzclient) in separate processes.
 
         $ gazebo --help
         Gazebo multi-robot simulator, version 1.2.5
@@ -81,11 +81,12 @@ the available options are:
 
 Example
 --
-For example, to start an empty world paused, type:
+For example, to start an empty world **paused**, type:
 
         $ gazebo -u worlds/empty.world
+To start an empty world with simulation running, omit the -u.
 
-Note that this is assuming that there is a file named `empty.world` in the path defined by
+Note that this is assuming that there is a file named `empty.world` in the path defined by:
 
         ${GAZEBO_RESOURCE_PATH}/worlds/empty.world
 
