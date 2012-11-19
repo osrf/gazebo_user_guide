@@ -15,7 +15,7 @@ You can find out the command line arguments to `gazebo` with the `-h` argument:
 
     gazebo -h
 
-A useful parameter is to start simulation in a paused state:
+This useful parameter starts simulation in a **paused** state:
 
     gazebo -u <world_file_name>
 
@@ -25,10 +25,10 @@ The easiest way to create a world is to copy and make changes to an existing
 [SDF](http://gazebosim.org/sdf) world file.  Please refer to the
 [SDF](http://gazebosim.org/sdf) specification for additional information.
 
-A simple mechanism to adding models to a world is through the `include` SDF element. The `include` SDF element requires a `uri` to a model, which can be of the following two forms:
+A simple mechanism for adding models to a world is through the `include` SDF element. The `include` SDF element requires a `uri` to a model, which can be of the following two forms:
 
-1. `model://`: This specifies a model in the Model Database.
-1. `file://`: This specifies a model file on disk.
+1. `model://`: This specifies a model in the Model Database
+1. `file://`: This specifies a model file on disk
 
 Example:
 
@@ -53,10 +53,10 @@ A basic world may consist of just a light source and a ground plane:
 
 Scene parameters define how the world environment looks. These parameters consist of:
 
-- Ambient light: The color of global illumination.
-- Sky: Cloud, sun, and moon parameters.
-- Fog: Color, density, and type of fog.
-- Grid: Enable or disable a grid plane visualization.
+- Ambient light: The color of global illumination
+- Sky: Cloud, sun, and moon parameters
+- Fog: Color, density, and type of fog
+- Grid: Enable or disable a grid plane visualization
 
 These parameters may be specified in
 a [scene](http://gazebosim.org/sdf/1.2.html#scene) element in
@@ -66,5 +66,5 @@ a [scene](http://gazebosim.org/sdf/1.2.html#scene) element in
 
 Physics parameters define how the physics engine is run. These parameters
 vary between physics engines. Please refer to the
-[physics](http://gazebosim.org/sdf/1.2.html#physics) element in
+[physics](http://gazebosim.org/sdf/1.2.html#physics) element in the
 [SDF](http://gazebosim.org/sdf).

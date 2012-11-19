@@ -1,7 +1,7 @@
 Environment Variables {#started__components__env}
 ======================
 
-Gazebo uses five environment variables to locate files, and setup communications between the server and clients.
+Gazebo uses five environment variables to locate files and set up communications between the server and clients.
 
 > **GAZEBO_MASTER_URI**: The hostname and port of the master, typically `http://localhost:11345`
 

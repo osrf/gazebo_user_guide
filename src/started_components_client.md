@@ -8,11 +8,11 @@ computers.
 
 ## Usage ##
 
-The client my be run using:
+The client is run using:
 
     gzclient
 
-By default the client will try to connect to a master in order to discover
-a sever. The location of the master, which is automatically started be the
+By default, the client will try to connect to a master in order to discover
+a server. The location of the master, which is automatically started by the
 server when it is run, is specified using the GAZEBO_MASTER_URI environment
 variable.

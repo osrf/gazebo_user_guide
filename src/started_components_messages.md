@@ -4,9 +4,9 @@ Messages {#started__components__messages}
 Gazebo uses a socket-based message passing system based on Google Protobuf
 to handle inter-process communication.
 
-## Built in Messages ##
+## Built-in Messages ##
 
-Gazebo provides many message types, which are document at [http://gazebosim.org/msgs](http://gazebosim.org/msgs)
+Gazebo provides many message types, all of which are documented at [http://gazebosim.org/msgs](http://gazebosim.org/msgs)
 
 ## Custom Messages ##
 
