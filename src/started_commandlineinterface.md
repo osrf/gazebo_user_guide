@@ -84,7 +84,7 @@ Example
 For example, to start an empty world **paused**, type:
 
         $ gazebo -u worlds/empty.world
-To start an empty world with simulation running, omit the -u.
+To start an empty world with simulation running, omit the `-u`.
 
 Note that this is assuming that there is a file named `empty.world` in the path defined by:
 

@@ -23,7 +23,7 @@ driver
 )
 ~~~~
 
-The above driver tells Player to load the `libgazebo_player` plugin which handles communication between Gazebo and Player.
+The above driver tells Player to load the `libgazebo_player` plugin, which handles communication between Gazebo and Player.
 
 Additional Player drivers can be added, such as a position driver:
 
@@ -38,7 +38,7 @@ driver
 
 Each driver `name` must be set to `gazebo`. The `gz_id` string must match a model within a running Gazebo simulation. In the above instance, Gazebo must have a model called `pioneer2dx`.
 
-Here is the complete player configuration file:
+Here is the complete Player configuration file:
 
 ~~~
 driver
@@ -61,7 +61,7 @@ Save the above configuration file as `gazebo.cfg`
 
 ## Gazebo World ##
 
-An Gazebo world file that matches the above player configuration would be:
+A Gazebo world file that matches the above Player configuration would be:
 
 ~~~
 <?xml version="1.0" ?>
@@ -90,7 +90,7 @@ Save the above world file as `pioneer2dx.world`
 
 ## Running Gazebo and Player ##
 
-Make sure you have saved the above player configuration as `gazebo.cfg`, and the Gazebo world file as `pioneer2dx.world`.
+Make sure you have saved the above Player configuration as `gazebo.cfg`, and the Gazebo world file as `pioneer2dx.world`.
 
 Start Gazebo:
 
@@ -104,4 +104,4 @@ Start Player:
 player gazebo.cfg
 ~~~
 
-You'll now be able to run `playerv` or other player clients.
+You'll now be able to run `playerv` or other Player clients.
