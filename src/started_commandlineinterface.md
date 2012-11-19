@@ -1,13 +1,13 @@
 Command Line Interface {#started_commandlineinterface}
 ======================
 
-Environment Setup
-==
-Linux
---
+## Environment Setup
+
+### Linux
+
 Gazebo in the Linux environment relies on a few environment variables to specify paths to various component and resource files.
-For a debian system install of Gazebo, this is provided in a setup script called `setup.sh`.
-To invoke the script and configure environment variables needed for Gazebo to function properly, type
+For a Debian system, the environment variables are set in a script called `setup.sh`.
+To invoke the script and configure the environment variables needed for Gazebo to function properly, type
  (note `1.X` should be replace by the actual Gazebo release version):
 
     $ source /usr/share/gazebo-1.X/setup.sh
@@ -23,15 +23,15 @@ For example, Gazebo 1.2 sets up the following environment variables:
     export OGRE_RESOURCE_PATH=/usr/lib/OGRE
 
 
-Gazebo Executables
-==
+## Gazebo Executables
+
 Once you have configured the environment variables,
 the command line interface allows you to startup Gazebo's Server or Client individually or at the same time.
-Please review the [architecture section](started__arch.html) for details on *Server* and *Client*.
+Please review the [architecture section](started__arch.html) for details on the Server and Client.
 While it is recommended that beginner users use *gazebo* to start both Server and Client instances at the same time,
 the available options are:
 
-*  *gzserver* starts up a *Server* process.
+*  *gzserver* starts a *Server* process.
 
         $ gzserver --help
         Gazebo multi-robot simulator, version 1.2.5
@@ -48,7 +48,7 @@ the available options are:
           -u [ --pause ]             Start the server in a paused state.
           -s [ --server-plugin ] arg Load a plugin.
 
-*  *gzclient* starts up a *Client* process.
+*  *gzclient* starts a *Client* process.
 
         $ gzclient --help
         Gazebo multi-robot simulator, version 1.2.5
@@ -62,7 +62,7 @@ the available options are:
           -h [ --help ]           Produce this help message.
           -g [ --gui-plugin ] arg Load a plugin.
 
-*  *gazebo* starts up Gazebo and forking off *Server*(gzserver) and *Client*(gzclient) child processes.
+*  *gazebo* starts the *Server*(gzserver) and *Client*(gzclient) in separate processes.
 
         $ gazebo --help
         Gazebo multi-robot simulator, version 1.2.5
