@@ -81,7 +81,7 @@ This line sets up Gazebo's transport system. It must be run before trying to cre
   gazebo::transport::SubscriberPtr sub = node->Subscribe("~/world_stats", cb);
 ~~~
 
-This block creates a Node, which in turn allows us to create Subscribers (which receive messages from a topic) and Publishers (which write messages to a topic). In this case we create a Subscriber that listens to messages on the `world_stats` topic. When creating a Subscriber we must specify a callback to receive the messages. Our callback is names `cb`, and receives messages of type `ConstWorldStatisticsPtr`.
+This block creates a Node, which in turn allows us to create Subscribers (which receive messages from a topic) and Publishers (which write messages to a topic). In this case we create a Subscriber that listens to messages on the `world_stats` topic. When creating a Subscriber we must specify a callback to receive the messages. Our callback is named `cb`, and receives messages of type `ConstWorldStatisticsPtr`.
 
 Now we can start processing messages.
 
@@ -173,14 +173,14 @@ target_link_libraries(listener ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES} ${PROTOBUF
 
 The above file searches for the necessary dependencies (Gazebo, Boost, and Protobuf), and then creates an executable called `listener`. We assume you have named the C++ source file `listener.cc`.
 
-Create a build directory.
+Create a build directory:
 
 ~~~
 mkdir build
 cd build
 ~~~
 
-Compile the code
+Compile the code:
 
 ~~~
 cmake ../; make
@@ -194,7 +194,7 @@ Run your listener code:
 listener
 ~~~
 
-In a new terminal start Gazebo:
+In a new terminal, start Gazebo:
 
 ~~~
 gazebo
