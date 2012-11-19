@@ -104,4 +104,4 @@ Start Player:
 player gazebo.cfg
 ~~~
 
-You'll now be able to run `playerv` or other player drivers.
+You'll now be able to run `playerv` or other player clients.
