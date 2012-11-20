@@ -22,5 +22,5 @@ Examples of most commonly used ROS plugins can be found in
 In addition, a tutorial on how to compile a ROS enabled plugin within the
 Gazebo framework can be found [in the wiki tutorials section](http://gazebosim.org/wiki/Tutorials/1.2/ros_enabled_model_plugin).
 
-Once a ROS enabled plugin is compiled, it works just like any other
+Once a ROS enabled plugin is compiled, it should work just like any other
 [Gazebo plugins](@ref started__components__plugins).
