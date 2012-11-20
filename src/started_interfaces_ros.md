@@ -15,6 +15,12 @@ the physical robot offers.  Such plugins can be simple, such as
 implementing differential drive for 2-wheeled vehicles, or complex, such as
 implementing sophisticated controllers for armed robots.
 
-The most commonly used ROS plugins can be found...TODO 
+Examples of most commonly used ROS plugins can be found in
+[gazebo_plugins](http://ros.org/wiki/gazebo_plugins) or
+[drc plugins](https://bitbucket.org/osrf/drcsim/src/d7d2c3f72d5caeb517d43b93f3ecb289eef70b64/plugins/ros?at=default).
 
-To load the common ROS plugins...TODO
+In addition, a tutorial on how to compile a ROS enabled plugin within the
+Gazebo framework can be found [in the wiki tutorials section](http://gazebosim.org/wiki/Tutorials/1.2/ros_enabled_model_plugin).
+
+Once a ROS enabled plugin is compiled, it works just like any other
+[Gazebo plugins](@ref started__components__plugins).
