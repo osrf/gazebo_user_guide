@@ -2,7 +2,7 @@ Building a Model {#started__models__building}
 ======================
 
 Models can range from simple shapes to complex robots. The name **model** refers
-the the `<model>` [SDF](http://gazebosim.org/sdf) tag, and should
+to the `<model>` [SDF](http://gazebosim.org/sdf) tag, and should
 be thought of as a collection of links, joints, collision objects, visuals, and
 plugins.  Creating a model file can be difficult depending on the complexity
 of the desired model. This page will offer some tips on how to build a
@@ -83,5 +83,5 @@ Here is a good order in which to add features:
  3.  Set the visual element
  4.  Set the inertial properties
  5.  Go to #1 until all links have been added.
- 6.  Add all joints (if any)
+ 6.  Add all joints (if any) and unset model static flag
  7.  Add all plugins (if any)
