@@ -19,6 +19,6 @@ We divided the user guide into the following sections. We recommend new users to
  - \subpage modifying
   + How to modify Gazebo, a must-read for Gazebo developers.
  - \subpage api
-  + The Gazebo API
+  + The Gazebo API.
  - \subpage tutorials
   + A collection of tutorials.
