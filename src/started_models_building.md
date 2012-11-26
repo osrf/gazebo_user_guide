@@ -12,20 +12,20 @@ model.
 
 **Step 1: Collect your meshes**
  
-This step involves gathering all the necessary 3D mesh files that are required
+This step involves gathering all of the necessary 3D mesh files that are required
 to build your model. Gazebo provides a set of simple shapes: box, sphere, and
 cylinder. If your model needs something more complex, then continue reading.
 
-Meshes come from a number of places. [Google's 3D Warehouse](http://sketchup.google.com/3dwarehouse) is a good repository of 3D models. Alternatively, you may already have the necessary files. Finally, you can make your own meshes using a 3D modeler such as [Blender](http://blender.org) or [Sketchup](http://sketchup.google.com).
+Meshes can come from a number of places, if you don't already have them. [Google's 3D Warehouse](http://sketchup.google.com/3dwarehouse) is a good repository of 3D models. Alternatively, you can make your own meshes using a 3D modeler such as [Blender](http://blender.org) or [Sketchup](http://sketchup.google.com).  
 
-Gazebo requires that mesh files be formatted as STL or Collada, with Collada
+Gazebo requires that mesh files be formatted as STL or COLLADA, with COLLADA
 being the preferred format. 
 
 * **Tip:** Use your 3D modeling software to move each mesh so that it is centered on the origin. This will make placement of the model in Gazebo significantly easier.
 
-* **Tip:** Collada file formats allow you to attach materials to the meshes.  Use this mechanism to improve the visual appearance of your meshes.
+* **Tip:** COLLADA file formats allow you to attach materials to the meshes.  Use this mechanism to improve the visual appearance of your meshes.
 
-* **Tip:** Keep meshes simple. This is especially true if you plan on using the mesh as a collision element. A common practice is to use a low polygon mesh for a collision element, and higher polygon mesh for the visual. An even better practice is to use one of the built-in shapes (box, sphere, cylinder) as the collision element. 
+* **Tip:** Keep meshes simple. This is especially true if you plan on using the mesh as a collision element. A common practice is to use a low polygon mesh for a collision element, and a higher polygon mesh for the visual. An even better practice is to use one of the built-in shapes (box, sphere, cylinder) as the collision element. 
 
 
 **Step 2: Make your .model file**
@@ -34,7 +34,7 @@ Start by creating an extremely simple model file, or copy an existing model
 file. The key here is to start with something that you know works, or can debug
 very easily.
  
-Here is a very rudimentary minimum box model file with just a unit sized box
+Here is a very rudimentary box model file with just a unit-sized box
 shape as a collision geometry and the same unit box visual:
 
 ~~~~
@@ -63,11 +63,11 @@ shape as a collision geometry and the same unit box visual:
 ~~~~
 
 Note that the origin of the Box-geometry is at the geometric center of the box,
-so in order to have the bottom of the box flush with the ground plane, an
+so to have the bottom of the box flush with the ground plane, an
 origin of `<pose>0 0 0.5 0 0 0</pose>` is added to raise the box above the
 ground plane.
 
-> **Tip:** The above example sets the simple box model to be static, which makes the model immovable. This feature is useful during model creation. Once you are done creating your model, set the `<static>` tag to false if you want your model to be movable.
+> **Tip:** The above example sets the simple box model to be static, which makes the model immovable. This feature is useful during model creation. Once you are done creating your model, set the `<static>` tag to "false" if you want your model to be movable.
 
 
 **Step 3: Add to the .model file**
