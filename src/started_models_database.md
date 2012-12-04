@@ -93,7 +93,7 @@ The format of this `manifest.xml` is:
 <model>
   <name>My Model Name</name>
   <version>1.0</version>
-  <sdf>model.sdf</sdf>
+  <sdf version='1.3'>model.sdf</sdf>
     
   <author>
     <name>My name</name>
@@ -114,6 +114,10 @@ The format of this `manifest.xml` is:
    Version of this model. 
 
    *Note:* This is not the version of [[sdf|SDF]] that the model uses. That information is kept in the `model.sdf` file.
+
+*  <*sdf*> *required*
+
+   The name of an SDF file that describes this model. The `version` attribute indicates what SDF version the file uses. Multiple <*sdf*> elements may be used in order to support multiple SDF versions.
 
 *  <*author*> *required*
    *  <*name*> *required*
