@@ -62,7 +62,8 @@ The arrow icons are the **View, Translate and Rotate modes.** These interaction 
 
 The **Cube, Sphere and Cylinder icons** let users add these simple shapes to the world. 
 
-The **Point Light, Spot Light and Directional Light icons** allow users to insert light into the world. 
+The **Point Light, Spot Light** and **Directional Light** icons allow users to insert light into the world. 
+<br> **Note:** The sun is considered a directional light. Changing the *position* of a directional light will not change the light properties, like shadows. The *orientation* of the light is what affects the light properties. Use the Rotate tool to change the orientation of the directional light. 
 
 
 ## Clock
