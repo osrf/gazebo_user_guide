@@ -23,17 +23,17 @@ You can  clone the repository using:
 
 A model database must abide by a specific directory and file structure. The
 root of a model database contains one directory for each model, and a
-`manifest.xml` file with information about the model database. Each model
-directory also has a `manifest.xml` file that contains meta data about the
+`database.config` file with information about the model database. Each model
+directory also has a `model.config` file that contains meta data about the
 model. A model directory also contains the SDF for the model and any materials,
 meshes, and plugins.
 
 The structure is as follows (in this example the database has only one model called `model_1`):
 
 * *Database*
-    * *manifest.xml* : Meta data about the database
+    * *database.config* : Meta data about the database
     * *model_1* : A directory for model_1
-        * *manifest.xml* : Meta-data about model_1
+        * *model.config* : Meta-data about model_1
         * *model.sdf* : SDF description of the model
         * *meshes* : A directory for all COLLADA and STL files 
         * *materials* : A directory which should only contain the `textures` and `scripts` subdirectories
@@ -50,10 +50,10 @@ This is an optional directory that contains all of the COLLADA and/or STL files 
 ### Material Directory
 This is an optional directory that contains all of the textures, images, and OGRE scripts for the model. Texture images must be placed in the `textures` subdirectory, and OGRE script files in the `scripts` directory.
 
-### Database Manifest XML
-This is the `manifest.xml` file in the root of the model database. This file contains license information for the models, a name for the database, and a list of all the valid models.
+### Database Config
+This is the `database.config` file in the root of the model database. This file contains license information for the models, a name for the database, and a list of all the valid models.
 
-The format of this `manifest.xml` is:
+The format of this `database.config` is:
 
 ~~~
 <?xml version='1.0'?>
@@ -81,11 +81,11 @@ The format of this `manifest.xml` is:
 
      The URI for a model, this should be `file://model_directory_name`
 
-### Model Manifest XML
+### Model Config 
 
-Each model must have a `manifest.xml` file in the model's root directory that contains meta information about the model.
+Each model must have a `model.config` file in the model's root directory that contains meta information about the model.
 
-The format of this `manifest.xml` is:
+The format of this `model.config` is:
 
 ~~~
 <?xml version="1.0"?>
@@ -160,10 +160,10 @@ description of the model.
 
         cd gazebo_models
         mkdir my_new_model
-3. Create the `manifest.xml` file. See above.
+3. Create the `model.config` file. See above.
 4. Create the `model.sdf` file. See above.
 5. Put all of the necessary materials, textures, meshes, and plugins in the appropriate directories.
-6. Add your model to the main `manifest.xml` file found in the root of the `gazebo_models` repository.
+6. Add your model to the main `database.config` file found in the root of the `gazebo_models` repository.
 7. Submit a [pull request](https://bitbucket.org/osrf/gazebo_models/pull-requests) through Bitbucket.
 
 ## GAZEBO_MODEL_DATABASE_URI and GAZEBO_MODEL_PATH
@@ -175,5 +175,5 @@ Gazebo uses two environment variables to find model databases.
     This is a URI that points to a model database. The default value is `http://gazebosim.org/models`
 1.  GAZEBO_MODEL_PATH
 
-    This is a colon-separated list of paths that Gazebo should search for databases. Each path should point to the directory that contains the database manifest.xml.
+    This is a colon-separated list of paths that Gazebo should search for databases. Each path should point to the directory that contains the database config.
 
