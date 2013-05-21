@@ -31,10 +31,11 @@ meshes, and plugins.
 The structure is as follows (in this example the database has only one model called `model_1`):
 
 * *Database*
-    * *database.config* : Meta data about the database
+    * *database.config* : Meta data about the database. This is now populated automatically from CMakeLists.txt
     * *model_1* : A directory for model_1
         * *model.config* : Meta-data about model_1
-        * *model.sdf* : SDF description of the model
+        * *model.sdf* : SDF description of the model- OR:
+	* *model.urdf* : URDF description of the model
         * *meshes* : A directory for all COLLADA and STL files 
         * *materials* : A directory which should only contain the `textures` and `scripts` subdirectories
             * *textures* : A directory for image files (jpg, png, etc).
@@ -117,7 +118,7 @@ The format of this `model.config` is:
 
 *  <*sdf*> *required*
 
-   The name of an SDF file that describes this model. The `version` attribute indicates what SDF version the file uses. Multiple <*sdf*> elements may be used in order to support multiple SDF versions.
+   The name of a SDF or URDF file that describes this model. The `version` attribute indicates what SDF version the file uses, and is not required for URDFs. Multiple <*sdf*> elements may be used in order to support multiple SDF versions.
 
 *  <*author*> *required*
    *  <*name*> *required*
@@ -146,24 +147,25 @@ The format of this `model.config` is:
 
          Version of the model.
 
-### Model SDF
+### Model SDF/URDF
 
-Each model requires a `model.sdf` file that contains the [[sdf | SDF]]
-description of the model.
+Each model requires a `model.sdf` or `model.urdf` file that contains the Simulator Description Format or Universal Robot Description Format
+of the model.
 
 ## Adding a New Model
 
-1. Clone the `gazebo_models` repository:
+1. Clone the `gazebo_models` repository to your local computer:
 
-        hg clone http://gazebosim.org/models
+ 	hg clone https://bitbucket.org/osrf/gazebo_models
+
 2. Create a new model directory within the repository:
 
         cd gazebo_models
         mkdir my_new_model
 3. Create the `model.config` file. See above.
-4. Create the `model.sdf` file. See above.
-5. Put all of the necessary materials, textures, meshes, and plugins in the appropriate directories.
-6. Add your model to the main `database.config` file found in the root of the `gazebo_models` repository.
+4. Create the `model.sdf` or `model.urdf` file. See above.
+5. Put all of the necessary materials, textures, meshes, and plugins in the appropriate directories. See above.
+6. To allow the model database to find your new model, add your model's folder name to the CMakeLists.txt file found in the root of the `gazebo_models` repository. Find the line that says "set (dirs.." and add the folder name to the list in alphabetical order.
 7. Submit a [pull request](https://bitbucket.org/osrf/gazebo_models/pull-requests) through Bitbucket.
 
 ## GAZEBO_MODEL_DATABASE_URI and GAZEBO_MODEL_PATH
@@ -172,8 +174,8 @@ Gazebo uses two environment variables to find model databases.
 
 1.  GAZEBO_MODEL_DATABASE_URI
 
-    This is a URI that points to a model database. The default value is `http://gazebosim.org/models`
+    This is a URI that points to an online model database. The default value is `http://gazebosim.org/models`
 1.  GAZEBO_MODEL_PATH
 
-    This is a colon-separated list of paths that Gazebo should search for databases. Each path should point to the directory that contains the database config.
+    This is a colon-separated list of local paths that Gazebo should search for databases. Each path should point to the directory that contains the database config. These paths take precedence over the online URI database.
 
