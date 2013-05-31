@@ -159,6 +159,7 @@ Here's an example world file, also found in `examples/plugins/hello_world/hello.
     </include>
 
     <plugin name="hello_world" filename="libhello_world.so"/>
+  </world>
 </gazebo>
 ~~~
 
